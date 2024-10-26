@@ -31,6 +31,13 @@ h2 {
   font-size: 22px;
   margin: 30px 0px 20px 0px;
 }
+.texto-h2-estadisticas{
+  font-size: 22px;
+  margin: 30px 0px 30px 0px;
+}
+.texto-h2-informacion{
+  font-size: 13px;
+}
 form {
   margin-bottom: 30px;
 }
@@ -44,6 +51,7 @@ select {
   padding: 3px;
   margin-bottom: 10px;
 }
+#contenedor-estadisticas,
 #form-curso,
 #form-estudiante,
 #form-edicion,
@@ -303,10 +311,51 @@ td {
 .form-control {
   margin-right: 10px;
 }
+.fa-chart-simple,
 .fa-book-medical,
 .fa-user-plus,
 .fa-list,
 .fa-graduation-cap,
 .fa-users{
   font-size: 15px;
+}
+#tabla-estadisticas {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+#tabla-estadisticas th,
+#tabla-estadisticas td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+#tabla-estadisticas th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+#tabla-estadisticas tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+#tabla-estadisticas tr:hover {
+  background-color: #f1f1f1;
+}
+#tabla-estadisticas td {
+  font-size: 14px;
+}
+#graficaEstudiantes {
+  width: 100% !important; /* O cualquier ancho deseado */
+  height: 800px; /* Ajusta la altura según sea necesario */
+
+}
+.contenedor-boton-grafica{
+  padding: 20px;
+}
+#btn-grafica{
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 7px 25px 7px 25px;
+
 }

@@ -7,6 +7,7 @@ import {
   mostrarMensaje,
   cadenaValida,
   guardarDatos,
+  calcularEstadisticas,
 } from "../Resolución Etapa 3/etapa3.js";
 
 //---------------------------------- Captura de ID's --------------------------------//
@@ -468,3 +469,45 @@ cancelarEdicionEstudiante.addEventListener("click", () => {
   edadEstudianteEditar.value = "";
   notaEstudianteEditar.value = "";
 });
+
+//------------------------------- Función para mostrar estadísticas -----------------------//
+
+window.onload = function () {
+  const graficaCanvas = document.getElementById("graficaEstudiantes");
+  const tablaEstadisticas = document.getElementById("tabla-estadisticas");
+  const { totalEstudiantes, promedioGeneral, totalCursos, mejorCurso } =
+    calcularEstadisticas();
+  document.getElementById("total-estudiantes").textContent = totalEstudiantes;
+  document.getElementById("promedio-general").textContent = promedioGeneral;
+  document.getElementById("total-cursos").textContent = totalCursos;
+  document.getElementById("mejor-curso").textContent = mejorCurso || "N/A";
+  const ctx = graficaCanvas.getContext("2d");
+  const graficaEstudiantes = new Chart(ctx, {
+    type: "pie",
+    data: {
+      labels: ["Total de Estudiantes", "Promedio General", "Total de Cursos"],
+      datasets: [
+        {
+          label: "Estadísticas",
+          data: [totalEstudiantes, promedioGeneral, totalCursos],
+          backgroundColor: ["#36a2eb", "#ff6384", "#ffce56"],
+          hoverOffset: 4,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: "top",
+        },
+        title: {
+          display: true,
+          text: "Estadísticas de Estudiantes",
+        },
+      },
+    },
+  });
+  graficaCanvas.style.display = "block";
+};

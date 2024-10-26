@@ -167,3 +167,32 @@ export function cadenaValida(cadena) {
 export function guardarDatos() {
   localStorage.setItem("cursos", JSON.stringify(cursos));
 }
+//------------------ Función para calcular estadísticas ------------------//
+
+export function calcularEstadisticas() {
+  let totalEstudiantes = 0;
+  let sumaNotas = 0;
+  let totalCursos = cursos.length;
+  let mejorCurso = null;
+  let mejorPromedio = 0;
+  cursos.forEach((curso) => {
+    totalEstudiantes += curso.estudiantes.length;
+    const promedioCurso = curso.obtenerPromedio();
+
+    if (promedioCurso !== "N/A") {
+      const promedioNum = parseFloat(promedioCurso);
+      sumaNotas += curso.estudiantes.reduce(
+        (total, estudiante) => total + estudiante.nota,
+        0
+      );
+      if (promedioNum > mejorPromedio) {
+        mejorPromedio = promedioNum;
+        mejorCurso = curso.nombre;
+      }
+    }
+  });
+  const promedioGeneral =
+    totalEstudiantes > 0 ? (sumaNotas / totalEstudiantes).toFixed(2) : "N/A";
+
+  return { totalEstudiantes, promedioGeneral, totalCursos, mejorCurso };
+}
