@@ -19,10 +19,16 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="banner-container">
+        <img
+          src="../Resolución Etapa 3/images/Banner.png"
+          alt="Sistema de Gestión de Cursos"
+          class="banner-image"
+        />
+      </div>
+      <div id="contenedor-cursos" class="container">
         <div class="row">
           <div class="main-container col-10">
-            <h1 class="texto-h1">Sistema de Gestión de Cursos</h1>
             <!-- Formulario para agregar cursos -->
             <h2 class="texto-h2">
               <i class="fa-solid fa-book-medical"></i> Agregar Curso
@@ -94,7 +100,13 @@
             </h2>
             <div class="input-container mb-3 container">
               <div class="row">
-                <div class="col"></div>
+                <div class="col">
+                  <div class="json">
+                    <button id="exportar-json" class="btn btn-success">
+                      <i class="fa-solid fa-download"></i> Exportar a JSON
+                    </button>
+                  </div>
+                </div>
                 <div class="col position-relative">
                   <input
                     type="text"
@@ -255,6 +267,26 @@
           </div>
         </div>
       </div>
+      <footer class="footer">
+        <div class="footer-redes">
+          <h3>¡Seguinos en nuestras redes!</h3>
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+        <div class="container">
+          <p class="politica_privacicad">
+            Contáctanos: info@utncursos.com | Tel: (123) 456-7890
+          </p>
+          <p class="politica_privacicad">© 2024 Sistema de Gestión de Cursos</p>
+        </div>
+      </footer>
     </main>
     <script type="module" src="app.js"></script>
     <script src="../Resolución Etapa 3/etapa3.js"></script>

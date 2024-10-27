@@ -3,13 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   padding: 20px;
 }
-
 .main-container {
   max-width: 800px;
   margin: auto;
@@ -18,7 +16,10 @@ body {
   border-radius: 2px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
+#contenedor-cursos{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 h1,
 h2 {
   text-align: center;
@@ -339,23 +340,44 @@ td {
 #tabla-estadisticas tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-#tabla-estadisticas tr:hover {
-  background-color: #f1f1f1;
-}
 #tabla-estadisticas td {
   font-size: 14px;
 }
 #graficaEstudiantes {
-  width: 100% !important; /* O cualquier ancho deseado */
-  height: 800px; /* Ajusta la altura según sea necesario */
+  width: 100% !important;
+  height: 800px;
 
 }
 .contenedor-boton-grafica{
   padding: 20px;
 }
-#btn-grafica{
+#exportar-json{
   font-size: 13px;
   border-radius: 4px;
   padding: 7px 25px 7px 25px;
-
 }
+.banner-image{
+  width: 100%;
+  height: 560px;
+}
+.footer {
+  text-align: center;
+  color: aliceblue;
+  padding: 40px;
+  background-color: rgb(55, 55, 57);
+  }
+  .footer-redes {
+    margin-bottom: 20px;
+  }
+  .footer-redes i {
+    margin: 0 10px;
+    font-size: 24px;
+    color:aliceblue;
+  }
+  .footer-redes i:hover {
+    color:#0924f7;
+  }
+  .politica_privacicad{
+    background-color: #999;
+    color: black;
+  }
