@@ -19,15 +19,42 @@
   </head>
   <body>
     <main>
-      <div class="banner-container">
-        <img
-          src="../Resolución Etapa 3/images/Banner.png"
-          alt="Sistema de Gestión de Cursos"
-          class="banner-image"
-        />
+      <div class="contenedor-banner">
+        <div class="banner-text text-center">
+          <div class="contenedor-texto-plataforma">
+            <h1 class="texto-plataforma">
+              <i class="fa-solid fa-bars-progress"></i> Plataforma de Gestión
+              Educativa
+            </h1>
+          </div>
+          <div class="text-center col-6">
+            <p class="texto-solucion">
+              ¡Bienvenido al sistema de gestión de cursos y estudiantes!. Este
+              sistema te permitirá gestionar de manera eficiente la información
+              de tus cursos y estudiantes, utilizando clases y objetos para
+              simplificar el proceso. Explora el proyecto que prepare para
+              optimizar tu experiencia académica. ¡Disfruta!
+            </p>
+          </div>
+          <div class="col-6">
+            <button id="link-empezar" class="btn btn-success">
+              <a
+                id="boton-empezar"
+                href="#main-section"
+                style="color: white; text-decoration: none"
+                ><i class="fa-solid fa-play"></i> Empezar</a
+              >
+            </button>
+          </div>
+          <div class="contendor-texto-diseño">
+            <p class="texto-diseño text-center">
+              Diseñado por: Milton F. Ruiz <i class="fa-solid fa-pen-nib"></i>
+            </p>
+          </div>
+        </div>
       </div>
       <div id="contenedor-cursos" class="container">
-        <div class="row">
+        <div id="main-section" class="row">
           <div class="main-container col-10">
             <!-- Formulario para agregar cursos -->
             <h2 class="texto-h2">
@@ -98,7 +125,7 @@
             <h2 class="texto-h2">
               <i class="fa-solid fa-list"></i> Listado de Cursos y Estudiantes
             </h2>
-            <div class="input-container mb-3 container">
+            <div class="input-container mb-5 container">
               <div class="row">
                 <div class="col">
                   <div class="json">
