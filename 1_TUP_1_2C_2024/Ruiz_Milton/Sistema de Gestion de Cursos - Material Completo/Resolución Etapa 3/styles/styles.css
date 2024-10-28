@@ -27,7 +27,7 @@
   color: white;
 }
 .texto-plataforma{
-  font-size: 41px;
+  font-size: 31px;
 }
 .texto-solucion{
   padding: 10px;
@@ -51,13 +51,16 @@
   transition: 1s;
 }
 .contendor-texto-diseño{
-  margin-top: 160px;
+  margin-top: 180px;
 }
 .contenedor-texto-plataforma{
   margin-top: 170px;
 }
 .texto-diseño{
-  font-size: 10px;
+  font-size: 17px;
+  font-family: "Babylonica", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 body {
   font-family: Arial, sans-serif;
@@ -451,15 +454,11 @@ td {
   transition: 1s;
 }
 .info-redes{
-  font-weight: 100;
-  font-size: 13px;
+  font-weight: 300;
+  font-size: 11px;
   color: white;
   margin: auto;
-}
-.copyright{
-  font-weight: 100;
-  padding: 140px 0px 0px 0px;
-  font-size: 10px;
+  letter-spacing: 1px;
 }
 .fa-bars-progress{
   filter: drop-shadow(0 0 5px #23b37c);
@@ -474,8 +473,8 @@ td {
 }
 .texto-contacto{
   letter-spacing: 5px;
-  font-size: 22px;
-  font-weight: 100;
+  font-size: 19px;
+  font-weight: 300;
   margin: 0px 0px 10px 0px;
 }
 .footer {
@@ -496,14 +495,16 @@ td {
   margin: 0 10px;
 }
 .copyright {
-  font-size: 12px;
+  font-weight: 300;
+  padding: 140px 0px 0px 0px;
+  font-size: 11px;
   margin-top: auto;
   text-align: center;
 }
 .h3-mis-redes{
   letter-spacing: 5px;
-  font-size: 22px;
-  font-weight: 100;
+  font-size: 19px;
+  font-weight: 300;
 }
 label {
   font-size: 12px;
@@ -512,21 +513,23 @@ label {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25D366;
+  background-color: #198754;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 22px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: background-color 0.3s;
   text-decoration: none;
+  transition: background-color 1s;
 }
 .boton-whatsapp:hover {
+  transition: 1s;
+  border: 1px solid white;
   background-color: #128C7E;
 }
