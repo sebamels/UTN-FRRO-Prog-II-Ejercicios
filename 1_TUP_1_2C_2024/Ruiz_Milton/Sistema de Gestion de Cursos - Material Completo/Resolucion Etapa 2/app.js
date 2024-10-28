@@ -57,6 +57,7 @@ const totalEstudiantesElem = document.getElementById("total-estudiantes");
 const promedioGeneralElem = document.getElementById("promedio-general");
 const totalCursosElem = document.getElementById("total-cursos");
 const mejorCursoElem = document.getElementById("mejor-curso");
+const botonEmpezar = document.getElementById("boton-empezar");
 //---------------------------- Clase Estudiante -------------------------------------//
 
 class Estudiante {
@@ -493,3 +494,11 @@ window.onload = function () {
 
   graficaCanvas.style.display = "block";
 };
+//------------------------------- Evento para desplazar a elemento -----------------------//
+
+botonEmpezar.addEventListener("click", function (event) {
+  event.preventDefault();
+  const target = document.getElementById("nombre-curso");
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+  target.focus();
+});
