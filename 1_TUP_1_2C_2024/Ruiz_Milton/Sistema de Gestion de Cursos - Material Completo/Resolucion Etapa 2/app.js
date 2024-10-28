@@ -295,10 +295,10 @@ export function mostrarCursos(busqueda = "") {
         }</td>
         <td class="td-contenedor-botones" rowspan="${cantidadEstudiantes || 1}">
           <div class="botones-acciones">
-            <button id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
+            <button title="Boton Editar" id="boton-editar-curso" class="editar-curso btn btn-warning" nombre="${
               curso.nombre
             }"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
-            <button class="btn btn-danger" id="boton-eliminar-curso"><i class="fa-solid fa-trash"></i> Eliminar</button>
+            <button title="Boton Eliminar" class="btn btn-danger" id="boton-eliminar-curso"><i class="fa-solid fa-trash"></i> Eliminar</button>
           </div>
         </td>
       `;

@@ -178,10 +178,10 @@ export function mostrarEstudiantes() {
       <td>${estudiante.edad}</td>
       <td>${estudiante.nota}</td>
       <td>
-        <button class="btn btn-warning" id="boton-editar-estudiante" data-index="${index}">
+        <button title="Boton Editar" class="btn btn-warning" id="boton-editar-estudiante" data-index="${index}">
           <i class="fa-regular fa-pen-to-square"></i> Editar
         </button>
-        <button class="btn btn-danger" id="boton-eliminar-estudiante" data-index="${index}">
+        <button title="Boton Eliminar" class="btn btn-danger" id="boton-eliminar-estudiante" data-index="${index}">
           <i class="fa-solid fa-trash"></i> Eliminar
         </button>
       </td>

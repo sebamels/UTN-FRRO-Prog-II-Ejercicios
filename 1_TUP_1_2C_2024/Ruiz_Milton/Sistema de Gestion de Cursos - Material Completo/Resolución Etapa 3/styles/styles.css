@@ -424,6 +424,7 @@ td {
   color: aliceblue;
   padding: 40px 40px 10px 40px;
   background-color: rgb(55, 55, 57);
+  height: 350px;
 }
 .footer-redes,
 .footer-contacto {
@@ -432,65 +433,72 @@ td {
 }
 .fa-linkedin,
 .fa-github,
-  .fa-instagram{
-    font-size: 25px;
+.fa-instagram,
+.fa-x-twitter,
+.fa-discord{
+    font-size: 22px;
     color: white;
   }
-  .fa-linkedin:hover,
-  .fa-github:hover,
-  .fa-instagram:hover {
-    color: #23b37c;
-    transition: 1s;
-  }
-  .info-redes{
-    font-weight: 100;
-    font-size: 13px;
-    color: white;
-    margin: auto;
-  }
-  .copyright{
-    font-weight: 100;
-    padding: 80px 0px 0px 0px;
-    font-size: 10px;
-  }
-  .fa-bars-progress{
-    filter: drop-shadow(0 0 5px #23b37c);
-  }
-  .social-link {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    overflow: hidden;
-    margin: 5px 5px;
-  }
-  .texto-contacto{
-    font-weight: 100;
-    margin: 0px 0px 10px 0px;
-  }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-content {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 50px;
-  }
-  .footer-redes,
-  .footer-contacto {
-    flex: 1;
-    margin: 0 10px;
-  }
-  .copyright {
-    font-size: 12px;
-    margin-top: auto;
-    text-align: center;
-  }
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-instagram:hover,
+.fa-x-twitter:hover,
+.fa-discord:hover {
+  color: #23b37c;
+  transition: 1s;
+}
+.info-redes{
+  font-weight: 100;
+  font-size: 13px;
+  color: white;
+  margin: auto;
+}
+.copyright{
+  font-weight: 100;
+  padding: 140px 0px 0px 0px;
+  font-size: 10px;
+}
+.fa-bars-progress{
+  filter: drop-shadow(0 0 5px #23b37c);
+}
+.social-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 40px;
+  overflow: hidden;
+}
+.texto-contacto{
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 100;
+  margin: 0px 0px 10px 0px;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+.footer-redes,
+.footer-contacto {
+  flex: 1;
+  margin: 0 10px;
+}
+.copyright {
+  font-size: 12px;
+  margin-top: auto;
+  text-align: center;
+}
 .h3-mis-redes{
+  letter-spacing: 5px;
+  font-size: 22px;
   font-weight: 100;
 }
