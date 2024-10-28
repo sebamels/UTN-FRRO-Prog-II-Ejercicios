@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
 }
 .contenedor-banner {
   background: url(../images/banner2.png);
@@ -30,7 +31,7 @@
 }
 .texto-solucion{
   padding: 10px;
-  font-size: 13px;
+  font-size: 12px;
   width: 100%;
 }
 #link-empezar{
@@ -42,6 +43,7 @@
   margin-top: 10px;
 }
 #boton-empezar{
+  font-size: 11px;
   padding: 10px 33px;
 }
 #link-empezar:hover{
@@ -82,11 +84,11 @@ h2 {
   margin: 40px 0px 20px 0px;
 }
 .texto-h2 {
-  font-size: 22px;
+  font-size: 17px;
   margin: 50px 0px 20px 0px;
 }
 .texto-h2-estadisticas{
-  font-size: 22px;
+  font-size: 17px;
   margin: 50px 0px 20px 0px;
 }
 .texto-h2-informacion{
@@ -153,7 +155,7 @@ select {
   border-radius: 2px;
 }
 #boton-agregar-curso {
-  font-size: 13px;
+  font-size: 11px;
   color: white;
   border: none;
   cursor: pointer;
@@ -163,7 +165,7 @@ select {
   margin-top: 10px;
 }
 #boton-agregar-estudiante {
-  font-size: 13px;
+  font-size: 11px;
   color: white;
   border: none;
   cursor: pointer;
@@ -174,7 +176,7 @@ select {
 }
 #boton-eliminar-curso,
 #boton-editar-curso {
-  font-size: 13px;
+  font-size: 11px;
   padding: 7px 15px 7px 15px;
   width: 50%;
   border-radius: 3px;
@@ -182,7 +184,7 @@ select {
 }
 #boton-editar-estudiante,
 #boton-eliminar-estudiante {
-  font-size: 13px;
+  font-size: 11px;
   padding: 7px 15px 7px 15px;
   color: white;
   border-radius: 3px;
@@ -196,7 +198,7 @@ select {
 #guardar-edicion,
 #cancelar-edicion{
   color: white;
-  font-size: 13px;
+  font-size: 11px;
   padding: 7px 1px;
   width: 13%;
   border-radius: 3px;
@@ -205,7 +207,7 @@ select {
 #guardar-edicion-estudiante,
 #cancelar-edicion-estudiante {
   color: white;
-  font-size: 13px;
+  font-size: 11px;
   padding: 7px 1px;
   width: 13%;
   border-radius: 3px;
@@ -243,6 +245,7 @@ select {
 .tabla-cursos td,
 .tabla-estudiante th,
 .tabla-estudiante td {
+  font-size: 13px;
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
@@ -255,7 +258,7 @@ label {
 }
 .texto-h4-curso,
 .texto-h4-estudiante {
-  font-size: 20px;
+  font-size: 17px;
   margin: auto;
 }
 .texto-h4-estudiante{
@@ -409,7 +412,7 @@ td {
   padding: 20px;
 }
 #exportar-json{
-  font-size: 13px;
+  font-size: 11px;
   border-radius: 4px;
   padding: 7px 25px 7px 25px;
 }
@@ -501,4 +504,7 @@ td {
   letter-spacing: 5px;
   font-size: 22px;
   font-weight: 100;
+}
+label {
+  font-size: 12px;
 }
