@@ -1,17 +1,3 @@
-//----------------------------- Importación de Funciones -----------------------------//
-
-import {
-  edicionEstudiantes,
-  editarCurso,
-  primeraMayuscula,
-  mostrarMensaje,
-  cadenaValida,
-  guardarDatos,
-  calcularEstadisticas,
-  mostrarEstudiantes,
-  actualizarEstadisticas,
-} from "../Resolución Etapa 3/etapa3.js";
-
 //---------------------------------- Captura de ID's --------------------------------//
 
 const formCurso = document.getElementById("form-curso");
@@ -58,6 +44,7 @@ const promedioGeneralElem = document.getElementById("promedio-general");
 const totalCursosElem = document.getElementById("total-cursos");
 const mejorCursoElem = document.getElementById("mejor-curso");
 const botonEmpezar = document.getElementById("boton-empezar");
+
 //---------------------------- Clase Estudiante -------------------------------------//
 
 class Estudiante {
@@ -100,8 +87,8 @@ class Curso {
 }
 //----------------------- Arreglo y Variables  -------------------------//
 
-export let cursos = [];
-export let cursoActual = null;
+let cursos = [];
+let cursoActual = null;
 let ordenarPorEdad = false;
 let ordenarPorNota = false;
 
@@ -232,7 +219,7 @@ listaEstudiantesEdicion.addEventListener("click", (e) => {
 });
 //------------------- Función para actualizar el select de cursos --------------//
 
-export function actualizarCursosSelect() {
+function actualizarCursosSelect() {
   cursoEstudianteSelect.innerHTML = "";
   cursos.forEach((curso, index) => {
     const option = document.createElement("option");
@@ -243,7 +230,7 @@ export function actualizarCursosSelect() {
 }
 //------------------- Función para mostrar los cursos y estudiantes -------------------//
 
-export function mostrarCursos(busqueda = "") {
+function mostrarCursos(busqueda = "") {
   listaCursos.innerHTML = "";
   const tabla = document.createElement("table");
   tabla.classList.add("tabla-cursos");
@@ -502,3 +489,204 @@ botonEmpezar.addEventListener("click", function (event) {
   target.scrollIntoView({ behavior: "smooth", block: "start" });
   target.focus();
 });
+//--------------------------- Función para editar un curso ---------------------------//
+
+function editarCurso(
+  nombreCursoAntiguo,
+  nuevoNombreCurso,
+  nuevoNombreProfesor
+) {
+  const indice = cursos.findIndex(
+    (curso) => curso.nombre === nombreCursoAntiguo
+  );
+  if (indice !== -1) {
+    cursos[indice].nombre = nuevoNombreCurso;
+    cursos[indice].profesor = nuevoNombreProfesor;
+    actualizarCursosSelect();
+    mostrarCursos();
+  }
+}
+//----------------------- Función para primera letra Mayuscula -----------------------//
+
+function primeraMayuscula(palabra) {
+  return palabra.charAt(0).toUpperCase() + palabra.slice(1);
+}
+//------------------------- Función para mostrar estudiantes -------------------------//
+
+function mostrarEstudiantes() {
+  const listaEstudiantesEdicion = document.getElementById(
+    "lista-estudiantes-edicion"
+  );
+  listaEstudiantesEdicion.innerHTML = "";
+
+  if (cursoActual.estudiantes.length === 0) {
+    listaEstudiantesEdicion.innerHTML =
+      "<p>No hay estudiantes en este curso.</p>";
+    return;
+  }
+
+  const tablaEstudiantes = document.createElement("table");
+  tablaEstudiantes.classList.add("table", "tabla-estudiante");
+  tablaEstudiantes.innerHTML = `
+    <thead>
+      <tr>
+        <th class="bg-body-tertiary">Nombre</th>
+        <th class="bg-body-tertiary">Edad</th>
+        <th class="bg-body-tertiary">Nota</th>
+        <th class="bg-body-tertiary">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+  `;
+
+  cursoActual.estudiantes.forEach((estudiante, index) => {
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+      <td>${estudiante.nombre}</td>
+      <td>${estudiante.edad}</td>
+      <td>${estudiante.nota}</td>
+      <td>
+        <button title="Boton Editar" class="btn btn-warning" id="boton-editar-estudiante" data-index="${index}">
+          <i class="fa-regular fa-pen-to-square"></i> Editar
+        </button>
+        <button title="Boton Eliminar" class="btn btn-danger" id="boton-eliminar-estudiante" data-index="${index}">
+          <i class="fa-solid fa-trash"></i> Eliminar
+        </button>
+      </td>
+    `;
+    tablaEstudiantes.querySelector("tbody").appendChild(fila);
+  });
+
+  listaEstudiantesEdicion.appendChild(tablaEstudiantes);
+}
+//------------------------- Función mostrar mensaje de creado -----------------------//
+
+function mostrarMensaje(mensaje, tipo) {
+  const mensajeDiv = document.createElement("div");
+  mensajeDiv.textContent = mensaje;
+  mensajeDiv.className = `mensaje ${tipo}`;
+  document.body.appendChild(mensajeDiv);
+  setTimeout(() => {
+    mensajeDiv.classList.add("oculto");
+    setTimeout(() => {
+      mensajeDiv.remove();
+    }, 2000);
+  }, 3000);
+}
+//------------------------------- Función validar cadena ----------------------------//
+
+function cadenaValida(cadena) {
+  return (
+    typeof cadena === "string" && cadena.trim() !== "" && !/\d/.test(cadena)
+  );
+}
+//-------------------------- Función para guardar en localStorage ------------------//
+
+function guardarDatos() {
+  localStorage.setItem("cursos", JSON.stringify(cursos));
+}
+//---------------------------- Función para calcular estadísticas ------------------//
+
+function calcularEstadisticas() {
+  let totalEstudiantes = 0;
+  let sumaNotas = 0;
+  let totalCursos = cursos.length;
+  let mejorCurso = null;
+  let mejorPromedio = 0;
+  cursos.forEach((curso) => {
+    totalEstudiantes += curso.estudiantes.length;
+    const promedioCurso = curso.obtenerPromedio();
+
+    if (promedioCurso !== "N/A") {
+      const promedioNum = parseFloat(promedioCurso);
+      sumaNotas += curso.estudiantes.reduce(
+        (total, estudiante) => total + estudiante.nota,
+        0
+      );
+      if (promedioNum > mejorPromedio) {
+        mejorPromedio = promedioNum;
+        mejorCurso = curso.nombre;
+      }
+    }
+  });
+  const promedioGeneral =
+    totalEstudiantes > 0 ? (sumaNotas / totalEstudiantes).toFixed(2) : "N/A";
+
+  return { totalEstudiantes, promedioGeneral, totalCursos, mejorCurso };
+}
+//--------------------------------------- JSON -------------------------------------//
+
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("exportar-json")
+    .addEventListener("click", exportarDatosAJson);
+});
+// ----------------------- Función exportar datos archivo JSON----------------------//
+
+function exportarDatosAJson() {
+  const data = JSON.stringify(cursos, null, 2);
+  const blob = new Blob([data], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "cursos.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("exportar-json")
+    .addEventListener("click", exportarDatosAJson);
+});
+// --------------------- Función actualizar datos de estadistica -------------------//
+
+let graficaEstudiantes;
+function actualizarEstadisticas() {
+  const { totalEstudiantes, promedioGeneral, totalCursos, mejorCurso } =
+    calcularEstadisticas();
+  totalEstudiantesElem.textContent = totalEstudiantes;
+  promedioGeneralElem.textContent = promedioGeneral;
+  totalCursosElem.textContent = totalCursos;
+  mejorCursoElem.textContent = mejorCurso || "N/A";
+  const ctx = graficaCanvas.getContext("2d");
+  if (graficaEstudiantes) {
+    graficaEstudiantes.data.datasets[0].data = [
+      totalEstudiantes,
+      promedioGeneral,
+      totalCursos,
+    ];
+    graficaEstudiantes.update();
+  } else {
+    graficaEstudiantes = new Chart(ctx, {
+      type: "pie",
+      data: {
+        labels: ["Total de Estudiantes", "Promedio General", "Total de Cursos"],
+        datasets: [
+          {
+            label: "Estadísticas",
+            data: [totalEstudiantes, promedioGeneral, totalCursos],
+            backgroundColor: ["#36a2eb", "#ff6384", "#ffce56"],
+            hoverOffset: 4,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "top",
+          },
+          title: {
+            display: true,
+            text: "Estadísticas de Estudiantes",
+          },
+        },
+      },
+    });
+  }
+
+  graficaCanvas.style.display = "block";
+}
