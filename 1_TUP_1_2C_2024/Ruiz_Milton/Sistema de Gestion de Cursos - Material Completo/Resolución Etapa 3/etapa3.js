@@ -320,5 +320,5 @@ export function actualizarEstadisticas() {
     });
   }
 
-  graficaCanvas.style.display = "block"; // Asegúrate de mostrar el canvas
+  graficaCanvas.style.display = "block";
 }
