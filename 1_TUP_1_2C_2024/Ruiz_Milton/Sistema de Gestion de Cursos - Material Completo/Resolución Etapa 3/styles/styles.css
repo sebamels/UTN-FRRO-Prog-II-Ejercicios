@@ -536,3 +536,12 @@ label {
   border: 1px solid white;
   background-color: #128C7E;
 }
+.email-link{
+  font-size: 11px;
+  color: whitesmoke;
+  transition: 1s;
+  text-decoration: none;
+}
+.email-link:hover {
+  transition: 1s;
+  color: #23b37c;}
