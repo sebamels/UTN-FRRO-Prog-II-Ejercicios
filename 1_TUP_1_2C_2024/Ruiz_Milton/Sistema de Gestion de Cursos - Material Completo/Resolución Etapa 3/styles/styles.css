@@ -38,6 +38,9 @@
   width: 100%;
 }
 #link-empezar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 13px;
   color: white;
   padding: 9px 1px 9px 1px;
@@ -46,8 +49,10 @@
   margin-top: 10px;
 }
 #boton-empezar{
+  display: flex;
+  align-items: center;
   font-size: 11px;
-  padding: 10px 33px;
+  padding: 3px 43px;
 }
 #link-empezar:hover{
   border: 1px solid white;
@@ -386,6 +391,10 @@ td {
 .fa-users{
   font-size: 15px;
 }
+.fa-solid {
+  font-size: 13px;
+  margin-right: 5px;
+}
 #tabla-estadisticas {
   width: 100%;
   border-collapse: collapse;
@@ -544,4 +553,17 @@ label {
 }
 .email-link:hover {
   transition: 1s;
-  color: #23b37c;}
+  color: #23b37c;
+}
+@media (max-width: 575px) {
+  #link-empezar {
+    padding: 10px 30px;
+  }
+  .texto-empezar {
+    display: none;
+  }
+  .fa-play {
+    margin-left: 5px;
+    font-size: 15px;
+  }
+}
