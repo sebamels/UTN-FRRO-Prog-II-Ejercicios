@@ -396,7 +396,6 @@ td {
 }
 .fa-solid {
   font-size: 13px;
-  margin-right: 5px;
 }
 #tabla-estadisticas {
   width: 100%;
@@ -584,8 +583,22 @@ label {
     padding: 10px 30px;
   }
   .texto-empezar,
-  .texto-gestion {
+  .texto-gestion,
+  .texto-agregar-curso,
+  .texto-agregar-estudiante,
+  .texto-exportar-json {
     display: none;
+  }
+  #busqueda-ingresada::placeholder {
+    color: transparent; /* Hace que el placeholder sea invisible */
+  }
+  #busqueda-ingresada {
+    width: 180px;
+    padding-left: 30px; /* Espacio para centrar la lupa */
+  }
+  .fa-magnifying-glass {
+    left: 80%; /* Mueve la lupa al centro */
+    transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
   }
   .fa-play {
     margin-left: 5px;
