@@ -567,6 +567,9 @@ label {
     box-sizing: border-box;
   }
 }
+.texto-empezar{
+  margin-left: 5px;
+}
 /*------------ Diseño Responsive 442px ------------*/
 @media (max-width: 443px) {
   .contenedor-banner,
