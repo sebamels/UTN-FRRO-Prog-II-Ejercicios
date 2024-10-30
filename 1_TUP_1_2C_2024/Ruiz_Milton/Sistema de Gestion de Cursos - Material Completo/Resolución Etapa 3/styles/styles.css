@@ -561,26 +561,26 @@ label {
 }
 @media (max-width: 317px) {
   .main-container {
-    width: 100%; /* Asegúrate de que el ancho sea 100% */
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Elimina padding */
+    width: 100%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 }
 .texto-empezar{
   margin-left: 5px;
 }
-/*------------ Diseño Responsive 442px ------------*/
+/* ------------------------ Diseño Responsive 442px ------------------------*/
 @media (max-width: 443px) {
   .contenedor-banner,
   .main-container {
-    width: 100%; /* Asegúrate de que el ancho sea 100% */
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Elimina padding */
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 }
-/*------------ Diseño Responsive 575px ------------*/
+/*------------------------ Diseño Responsive 575px ------------------------*/
 @media (max-width: 575px) {
   #link-empezar {
     padding: 10px 30px;
@@ -593,15 +593,15 @@ label {
     display: none;
   }
   #busqueda-ingresada::placeholder {
-    color: transparent; /* Hace que el placeholder sea invisible */
+    color: transparent;
   }
   #busqueda-ingresada {
     width: 180px;
-    padding-left: 30px; /* Espacio para centrar la lupa */
+    padding-left: 30px;
   }
   .fa-magnifying-glass {
-    left: 80%; /* Mueve la lupa al centro */
-    transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
+    left: 80%;
+    transform: translate(-50%, -50%);
   }
   .fa-play {
     margin-left: 5px;
@@ -616,27 +616,27 @@ label {
 }
 /*-------------------------------------------------*/
 .container {
-  width: 100%; /* Asegúrate de que todos los contenedores tengan este estilo */
-  max-width: none; /* Para evitar restricciones de ancho */
-  margin: 0 auto; /* Centra el contenedor */
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
 }
 .row {
   display: flex;
-  flex-wrap: wrap; /* Asegúrate de que los elementos puedan ajustar */
+  flex-wrap: wrap;
 }
 body {
-  overflow-x: hidden; /* Esto oculta el desbordamiento horizontal */
+  overflow-x: hidden;
 }
 img {
-  max-width: 100%; /* Asegúrate de que se escalen correctamente */
-  height: auto; /* Mantiene la proporción */
+  max-width: 100%;
+  height: auto;
 }
 footer {
-  width: 100%; /* Asegúrate de que el footer no cause desbordamiento */
+  width: 100%;
 }
 .container,
 .main-container,
 .contenedor-banner {
   width: 100%;
-  max-width: 100%; /* Evita que se exceda el ancho del viewport */
+  max-width: 100%;
 }
