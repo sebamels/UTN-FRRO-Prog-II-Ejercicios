@@ -14,21 +14,27 @@ def dibujar_linea(longitud=50):
     print('-' * longitud)
 
 red= '\033[31m'
+green= '\033[32m'
 reset = '\033[39m'
 
 estadias = []
 #-----------------------------> Funciones de Estadía <----------------------------
 
 def ingresar_estadia():
+    limpiar()
+    print()
+    print('>>> 1. Ingresar Estadía')
+    print()
     patente = input("Ingrese el número de patente: ")
-    dibujar_linea()
     if any(estadia.nro_patente == patente for estadia in estadias):
         print(f"La patente {patente} ya ha sido ingresada previamente.")
     else:
+        limpiar()
+        print()
         nueva_estadia = Estadia(patente, datetime.now().strftime("%H:%M"))
         estadias.append(nueva_estadia)
-        print("Estadía ingresada\n",nueva_estadia)
-        dibujar_linea()
+        print(green+"¡Estadía ingresada correctamente!\n\n"+reset,nueva_estadia)
+        pausa()
 
 def finalizar_estadia():
     patente = input("Ingrese el número de patente para finalizar estadía: ")
