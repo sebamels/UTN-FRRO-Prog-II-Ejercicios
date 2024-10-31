@@ -585,6 +585,7 @@ label {
   #link-empezar {
     padding: 10px 30px;
   }
+  .texto-sistema,
   .texto-empezar,
   .texto-gestion,
   .texto-agregar-curso,
@@ -611,7 +612,8 @@ label {
     font-size: 30px;
   }
   .texto-solucion{
-    text-align: justify;
+    font-size: 25px;
+    text-align: center;
   }
 }
 /*-------------------------------------------------*/
