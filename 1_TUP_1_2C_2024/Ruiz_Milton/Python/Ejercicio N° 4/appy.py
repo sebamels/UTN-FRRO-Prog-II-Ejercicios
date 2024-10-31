@@ -13,8 +13,9 @@ def pausa():
 def dibujar_linea(longitud=50):
     print('-' * longitud)
 
-red= '\033[31m'
-green= '\033[32m'
+rojo = '\033[31m'
+verde = '\033[32m'
+azul = '\033[34m'
 reset = '\033[39m'
 
 estadias = []
@@ -27,44 +28,53 @@ def ingresar_estadia():
     print()
     patente = input("Ingrese el número de patente: ")
     if any(estadia.nro_patente == patente for estadia in estadias):
-        print(f"La patente {patente} ya ha sido ingresada previamente.")
+        incorrecto(rojo+f"¡La patente {patente} ya ha sido ingresada previamente!")
     else:
         limpiar()
         print()
         nueva_estadia = Estadia(patente, datetime.now().strftime("%H:%M"))
         estadias.append(nueva_estadia)
-        print(green+"¡Estadía ingresada correctamente!\n\n"+reset,nueva_estadia)
+        print(verde+"¡Estadía ingresada correctamente!\n\n"+reset,nueva_estadia)
         pausa()
 
 def finalizar_estadia():
+    limpiar()
+    print()
+    print('>>> 2. Finalizar Estadía')
+    print()
     patente = input("Ingrese el número de patente para finalizar estadía: ")
     estadia = next((e for e in estadias if e.nro_patente == patente), None)
     if estadia:
+        limpiar()
+        print()
         hora_actual = datetime.now().strftime("%H:%M")
         estadia.registrar_salida(hora_actual)
         horas_estadia = estadia.cant_hora
         horas_redondeadas = int(horas_estadia) + (1 if (horas_estadia - int(horas_estadia)) >= 0.5 else 0)
         importe = Precio.calcular_importe(horas_redondeadas)
-        print(f"El importe a abonar es: ${importe}")
+        print(azul+'> Patente: ',patente+reset)
+        print(azul+f"> Importe: ${importe}"+reset)
+        print()
+        pausa()
     else:
-        print("La patente no se encuentra registrada.")
-        dibujar_linea()
+        incorrecto(rojo+"¡La patente no se encuentra registrada!")
 
 def listar_estadias():
     if not estadias:
-        print("No hay estadías registradas.")
+        incorrecto(rojo+"¡No hay estadías registradas!")
     else:
-        print("Estadías registradas:")
+        limpiar()
+        print(">>> Estadías registradas: \n")
         for estadia in estadias:
-            print(estadia)
-    dibujar_linea()
+            print(azul+f'{estadia}'+reset)
+        pausa()
 
 #-------------------------------> Opcion Incorrecta <-----------------------------
 
 def incorrecto(texto):
     limpiar()
     print('')
-    print(red+f' x {texto} x'+reset)
+    print(rojo+f' x {texto} x'+reset)
     print('')
     pausa()
     limpiar()
@@ -144,3 +154,5 @@ def programa():
 #-----------------------------------> Ejecución <---------------------------------
 
 programa()
+
+#---------------------------------------------------------------------------------
