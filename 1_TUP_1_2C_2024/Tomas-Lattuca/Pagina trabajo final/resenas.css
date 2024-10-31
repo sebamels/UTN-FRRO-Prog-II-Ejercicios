@@ -85,3 +85,20 @@ h1{
     border: inset;
     border-color: black;
 }
+
+.boton{
+    margin-left: 800px;
+    margin-top: 100px;
+    text-transform: uppercase;
+    border: 5px solid green;
+    color: green;
+    font-size: xx-large;
+    background-color: rgb(192, 146, 146);
+}
+.boton:hover{
+    color: green;
+    background-color: blue;
+    font-weight: bolder;
+    transition: 1.0s;
+    transform: scale(1.2);
+}

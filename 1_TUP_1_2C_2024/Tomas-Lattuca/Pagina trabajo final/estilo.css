@@ -52,4 +52,8 @@ nav{
 .nav-item-login{
     margin-top: 10px;
 }
-
+.welcome-message {
+    margin-right:00px ; 
+    color: rgb(38, 0, 255);
+    font-size: 1rem;
+}
