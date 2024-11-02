@@ -52,8 +52,13 @@ def finalizar_estadia():
         horas_estadia = estadia.cant_hora
         horas_redondeadas = int(horas_estadia) + (1 if (horas_estadia - int(horas_estadia)) >= 0.5 else 0)
         importe = Precio.calcular_importe(horas_redondeadas)
+        print()
+        print('>>> 2. Finalizar Estadía')
+        print()
         print(azul+'> Patente: ',patente+reset)
         print(azul+f"> Importe: ${importe}"+reset)
+        print(azul+f'> Hora actual: {hora_actual}'+reset)
+        print(azul+f'> Horas estadia: {horas_estadia}'+reset)
         print()
         pausa()
     else:
@@ -64,7 +69,7 @@ def listar_estadias():
         incorrecto(rojo+"¡No hay estadías registradas!")
     else:
         limpiar()
-        print(">>> Estadías registradas: \n")
+        print(">>> 3. Estadías registradas: \n")
         for estadia in estadias:
             print(azul+f'{estadia}'+reset)
         pausa()
