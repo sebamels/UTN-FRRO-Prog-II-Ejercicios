@@ -1,0 +1,75 @@
+/* static/style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+h1,
+h2 {
+  margin: 0.5rem;
+}
+.photo {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+}
+.photo img {
+  max-width: 100%;
+  height: auto;
+}
+#submit-button,
+#cancel-button,
+#edit-button,
+#delete-button,
+#add-button {
+  font-size: 14px;
+  border-radius: 3px;
+  padding: 5px 30px 5px 30px;
+  color: white;
+}
+.image-subcontainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 280px;
+  padding: 10px;
+  border: 1px solid red;
+}
+.image-subcontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-info {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}

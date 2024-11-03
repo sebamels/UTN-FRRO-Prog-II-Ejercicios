@@ -1,11 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>hola</p>
-  </body>
-</html>
+{% extends "base.html" %} {% block content %}
+<h2 class="text-center py-3">Galería de Fotos</h2>
+<div class="gallery">
+  {% for photo in photos %}
+  <div class="image-container">
+    <div class="image-subcontainer">
+      <img
+        src="{{ url_for('static', filename='uploads/' + photo.image) }}"
+        alt="{{ photo.title }}"
+      />
+    </div>
+    <div class="image-info">
+      <h4 class="h5-text">Título: {{ photo.title }}</h4>
+      <p>Descripción: {{ photo.description }}</p>
+      <div class="button-container">
+        <form
+          action="{{ url_for('main.delete_photo', photo_id=photo.id) }}"
+          method="post"
+          style="display: inline"
+        >
+          <button
+            id="delete-button"
+            class="btn btn-danger"
+            type="submit"
+            onclick="return confirm('¿Estás seguro de que quieres eliminar esta foto?');"
+          >
+            Borrar
+          </button>
+        </form>
+        <a
+          id="edit-button"
+          href="{{ url_for('main.edit_photo', photo_id=photo.id) }}"
+          class="btn btn-warning"
+          >Editar</a
+        >
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
