@@ -2,6 +2,14 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="author" content="Milton F. Ruiz" />
+    <meta
+      name="description"
+      content="Objetivo: Desarrollar una aplicación web para gestionar un álbum de fotos utilizando
+      Flask y Flask-SQLAlchemy. La aplicación debe permitir a los usuarios cargar imágenes y asociarlas
+      con una descripción. Cada entrada en el álbum debe tener un título, una descripción y la imagen
+      correspondiente."
+    />
     <title>Album de Fotos</title>
     <link
       rel="stylesheet"
@@ -13,6 +21,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/f0e78da616.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -23,6 +35,56 @@
         class="btn btn-primary"
         >Agregar nueva foto</a
       >
+      <div class="container-redes">
+        <div class="subcontainer-redes">
+          <h3 class="h3-mis-redes">
+            <i class="fa-solid fa-share-nodes"></i> Mis redes
+          </h3>
+          <a
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/miltonfruiz/"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            title="GitHub"
+            href="https://github.com/miltonfruiz"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            title="Instagram"
+            href="https://www.instagram.com/miltonfrdev/"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            title="Twitter"
+            href="https://x.com/mfrok24"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a
+            title="Discord"
+            href="https://discord.gg/RSBXQD3h"
+            target="_blank"
+            class="social-link"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a
+            href="https://wa.me/3413245896"
+            target="_blank"
+            class="boton-whatsapp"
+            title="Enviar WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
     </header>
     <main>{% block content %}{% endblock %}</main>
     <script
