@@ -4,11 +4,26 @@ body {
   padding: 0;
   background-color: #f0f0f0;
 }
-header {
-  background-color: #333333;
+li {
+  font-family: "Raleway", serif;
+  font-size: 14px;
+}
+.container-banner {
+  background: url(./images/leon1.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  height: 607px;
   color: #fff;
   padding: 1rem;
   text-align: center;
+  height: 607px;
+  margin: 0;
+  padding: 0;
 }
 h1,
 h2 {
@@ -25,17 +40,27 @@ h2 {
   max-width: 100%;
   height: auto;
 }
+#explore-button,
 #submit-button,
 #cancel-button,
 #edit-button,
 #delete-button,
 #add-button {
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 3px;
-  padding: 5px 30px 5px 30px;
+  padding: 6px 27px 6px 27px;
   color: white;
 }
 #add-button {
+  margin: 10px;
+  margin-bottom: 30px;
+}
+#explore-button {
+  font-family: "Raleway", serif;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 7px 30px 7px 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 10px;
 }
 .image-subcontainer {
@@ -52,6 +77,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  height: 600px;
 }
 .image-container {
   display: flex;
@@ -114,6 +140,7 @@ h2 {
   font-size: 13px;
 }
 .container-redes {
+  margin-top: 0px;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -129,5 +156,103 @@ a {
   justify-content: center;
   align-items: center;
   width: 300px;
-  border: 1px solid red;
+}
+#navbarSupportedContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item {
+  margin-left: 55px;
+}
+#texts-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90%;
+}
+#welcome-text {
+  font-family: "Raleway", serif;
+  color: black;
+  font-weight: 300;
+}
+#photo-album-text {
+  width: 100%;
+  color: black;
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+}
+#container-album {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+  margin-top: 130px;
+  margin-bottom: 80px;
+}
+.galery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#search-button {
+  font-family: "Raleway", serif;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 5px 15px 5px 15px;
+  width: 130px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#search-input {
+  height: 30px;
+  width: 170px;
+  font-style: oblique;
+  font-size: 12px;
+  font-family: "Raleway", serif;
+}
+#album-description-text {
+  font-family: "Raleway", serif;
+  width: 90%;
+  text-align: justify;
+  font-size: 10px;
+  color: black;
+}
+#row2 {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  align-self: end;
+}
+.social-link {
+  color: rgba(0, 0, 0, 0.603);
+  font-size: 21px;
+}
+.social-link:hover {
+  color: black;
+  transition: 1s;
+  filter: drop-shadow(0 0 10px black);
+  transform: scale(1.2);
+}
+
+#form-search {
+  margin-left: 250px;
+}
+.fa-magnifying-glass,
+.fa-play {
+  margin-left: 5px;
+  font-size: 10px;
+}
+#galery-text {
+  font-family: "Raleway", serif;
+}
+.fa-photo-film {
+  font-size: 15px;
+}
+.fa-trash,
+.fa-pen-to-square {
+  font-size: 12px;
 }

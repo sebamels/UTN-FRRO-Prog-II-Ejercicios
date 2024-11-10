@@ -1,41 +1,54 @@
 {% extends "base.html" %} {% block content %}
-<h2 class="text-center py-3">Galería de Fotos</h2>
-<div class="gallery">
-  {% for photo in photos %}
-  <div class="image-container">
-    <div class="image-subcontainer">
-      <img
-        src="{{ url_for('static', filename='uploads/' + photo.image) }}"
-        alt="{{ photo.title }}"
-      />
-    </div>
-    <div class="image-info">
-      <h4 class="h5-text">Título: {{ photo.title }}</h4>
-      <p class="description-text">Descripción: {{ photo.description }}</p>
-      <div class="button-container">
-        <form
-          action="{{ url_for('main.delete_photo', photo_id=photo.id) }}"
-          method="post"
-          style="display: inline"
-        >
-          <button
-            id="delete-button"
-            class="btn btn-danger"
-            type="submit"
-            onclick="return confirm('¿Estás seguro de que quieres eliminar esta foto?');"
+<section>
+  <div class="galery-container mt-5">
+    <h2 id="galery-text" class="text-center py-3">
+      <i class="fa-solid fa-photo-film"></i> Galería de Fotos
+    </h2>
+    <a
+      href="{{ url_for('main.add_photo') }}"
+      id="add-button"
+      class="btn btn-success"
+      ><i class="fa-solid fa-plus"></i> Agregar foto</a
+    >
+  </div>
+  <div class="gallery">
+    {% for photo in photos %}
+    <div class="image-container">
+      <div class="image-subcontainer">
+        <img
+          src="{{ url_for('static', filename='uploads/' + photo.image) }}"
+          alt="{{ photo.title }}"
+        />
+      </div>
+      <div class="image-info">
+        <h4 class="h5-text">Título: {{ photo.title }}</h4>
+        <p class="description-text">Descripción: {{ photo.description }}</p>
+        <div class="button-container">
+          <form
+            action="{{ url_for('main.delete_photo', photo_id=photo.id) }}"
+            method="post"
+            style="display: inline"
           >
-            Borrar
-          </button>
-        </form>
-        <a
-          id="edit-button"
-          href="{{ url_for('main.edit_photo', photo_id=photo.id) }}"
-          class="btn btn-warning"
-          >Editar</a
-        >
+            <button
+              id="delete-button"
+              class="btn btn-danger"
+              type="submit"
+              onclick="return confirm('¿Estás seguro de que quieres eliminar esta foto?');"
+            >
+              <i class="fa-solid fa-trash"></i> Borrar
+            </button>
+          </form>
+          <a
+            id="edit-button"
+            href="{{ url_for('main.edit_photo', photo_id=photo.id) }}"
+            class="btn btn-warning"
+            ><i class="fa-solid fa-pen-to-square"></i> Editar</a
+          >
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
+</section>
+
 {% endblock %}

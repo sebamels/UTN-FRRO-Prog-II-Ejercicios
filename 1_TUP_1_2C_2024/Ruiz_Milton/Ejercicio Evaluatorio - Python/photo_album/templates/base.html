@@ -25,64 +25,144 @@
       src="https://kit.fontawesome.com/f0e78da616.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=WindSong:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>Album de Fotos</h1>
-      <a
-        href="{{ url_for('main.add_photo') }}"
-        id="add-button"
-        class="btn btn-primary"
-        >Agregar nueva foto</a
-      >
-      <div class="container-redes">
-        <div class="subcontainer-redes">
-          <h3 class="h3-mis-redes">
-            <i class="fa-solid fa-share-nodes"></i> Mis redes
-          </h3>
-          <a
-            title="LinkedIn"
-            href="https://www.linkedin.com/in/miltonfruiz/"
-            target="_blank"
-            class="social-link"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a
-            title="GitHub"
-            href="https://github.com/miltonfruiz"
-            target="_blank"
-            class="social-link"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            title="Instagram"
-            href="https://www.instagram.com/miltonfrdev/"
-            target="_blank"
-            class="social-link"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            title="Twitter"
-            href="https://x.com/mfrok24"
-            target="_blank"
-            class="social-link"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-          <a
-            title="Discord"
-            href="https://discord.gg/RSBXQD3h"
-            target="_blank"
-            class="social-link"
-            ><i class="fa-brands fa-discord"></i
-          ></a>
-          <a
-            href="https://wa.me/3413245896"
-            target="_blank"
-            class="boton-whatsapp"
-            title="Enviar WhatsApp"
-          >
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
+      <div class="container-banner">
+        <nav class="navbar navbar-expand-lg container">
+          <div class="container">
+            <a class="navbar-brand" href="#"
+              ><i class="fa-solid fa-camera-retro"></i
+            ></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Galería</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Contacto</a
+                  >
+                </li>
+              </ul>
+              <form id="form-search" class="d-flex" role="search">
+                <input
+                  id="search-input"
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button
+                  title="Buscar"
+                  id="search-button"
+                  class="btn btn-secondary"
+                  type="submit"
+                >
+                  Buscar <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <div id="texts-container" class="container">
+          <div id="row1" class="row">
+            <div id="container-album" class="col">
+              <h6 id="welcome-text">Bienvenido a mí</h6>
+              <h1 id="photo-album-text">Álbum de Fotos</h1>
+              <p id="album-description-text">
+                Este proyecto consiste en un álbum de fotos personalizado que
+                Capta momentos especiales, con un diseño moderno y elegante. Él
+                Incluye secciones temáticas y diferentes categorías, todo en
+                materiales de alta calidad para una experiencia visual única y
+                duradera.
+              </p>
+              <a
+                title="Explorar"
+                href="#galery-text"
+                id="explore-button"
+                class="btn btn-secondary"
+                >Explorar <i class="fa-solid fa-play"></i
+              ></a>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+          <div id="row2" class="row">
+            <div class="col">
+              <div class="container-redes">
+                <div class="subcontainer-redes">
+                  <a
+                    title="LinkedIn"
+                    href="https://www.linkedin.com/in/miltonfruiz/"
+                    target="_blank"
+                    class="social-link"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                  <a
+                    title="GitHub"
+                    href="https://github.com/miltonfruiz"
+                    target="_blank"
+                    class="social-link"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    title="Instagram"
+                    href="https://www.instagram.com/miltonfrdev/"
+                    target="_blank"
+                    class="social-link"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a
+                    title="Twitter"
+                    href="https://x.com/mfrok24"
+                    target="_blank"
+                    class="social-link"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a
+                    title="Discord"
+                    href="https://discord.gg/RSBXQD3h"
+                    target="_blank"
+                    class="social-link"
+                    ><i class="fa-brands fa-discord"></i
+                  ></a>
+                  <a
+                    href="https://wa.me/3413245896"
+                    target="_blank"
+                    class="social-link"
+                    title="Enviar WhatsApp"
+                  >
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
