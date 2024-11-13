@@ -7,7 +7,7 @@
 #inicio {
    
     height: 400px;
-    background-image: url('/Blog/img/fondo3.png');
+    background-image: url('/1_TUP_1_2C_2024/Bustos_Jorge/Globalizador/tp blog/img/fondo3.png');
     background-size: 400px 400px;
     background-repeat: no-repeat;
     background-position: left;
@@ -16,7 +16,7 @@
 }
 #sobremi {
 
-    background-image: url('/Blog/img/fondo3.png');
+    background-image: url('/1_TUP_1_2C_2024/Bustos_Jorge/Globalizador/tp blog/img/fondo3.png');
     background-size: contain;
     visibility: 5%; 
     opacity: 3000px;
@@ -24,7 +24,7 @@
 }
 
 #skill {
-    background-image: url('/Blog/img/fondo3.png');
+    background-image: url('/1_TUP_1_2C_2024/Bustos_Jorge/Globalizador/tp blog/img/fondo3.png');
     background-size: cover;
 }
 
