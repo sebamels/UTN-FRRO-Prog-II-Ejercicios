@@ -474,11 +474,24 @@ td {
   margin: auto;
   letter-spacing: 1px;
 }
-.fa-bars-progress{
-  filter: drop-shadow(0 0 5px #23b37c);
+.fa-bars-progress {
   font-size: 30px;
   color: white;
+  filter: drop-shadow(0 0 5px #23b37c);
+  animation: smooth-blink-shadow 2s infinite ease-in-out;
 }
+
+@keyframes smooth-blink-shadow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(35, 179, 124, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(35, 179, 124, 0.2));
+  }
+}
+
+
+
 .social-link {
   display: inline-block;
   width: 30px;
