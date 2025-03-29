@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Rosario, Argentina, Monumento a la Bandera, turismo, sitios emblemáticos">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="./templates/galeria.html">Galeria</a>
+            <a href="./templates/tabla.html">Tabla</a>
+            <a href="http://www.google.com">Google</a>
+            <a href="lista.html">Listas</a>
+            <a href="formulario.html">Formularios</a>
+        </nav>
+    </header>
+<hr>
+    <main>
+        <section>
+            <p><h1>Formulario</h1></p>
+            <fieldset>
+                <form action="Link" method="POST" target="_blank">
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" size="50" id="Nombre" name="Nombre" required>
+                    <br>
+                    <label for="Nombre">Apellido:</label>
+                    <input type="text" size="50" id="Apellido" name="Apellido" required>
+                    <br>
+                    <label for="Fecha de nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" size="30" id="Fecha de nacimiento" name="Fecha de nacimiento" required>
+                    <br>
+                    <h3>Genero:</h3>
+                    <select name="Genero">
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                        <option>Otro</option>
+                    </select>
+                    <br>
+                    <h4>Desarrollo</h4>
+                    <input type="radio" name="opcion" value="1">App. Web
+                    <input type="radio" name="opcion" value="2">Analisis
+                    <input type="radio" name="opcion" value="3">Desarrollo
+                    <br>
+                    <input type="checkbox" name="opcion" value="1">html
+                    <input type="checkbox" name="opcion" value="2">css
+                    <input type="checkbox" name="opcion" value="3">js
+                    <br>
+                    <input type="checkbox" name="opcion" value="1">Chrome
+                    <input type="checkbox" name="opcion" value="2">Safari
+                    <input type="checkbox" name="opcion" value="3">Firefox
+                    <br>
+                    </select>
+                    <br>
+                    <input type="submit" value="Enviar">
+                    <input type="Reset" value="Borrar">
+                </form>
+            </fieldset>
+            <h3>Comentarios:</h3> <textarea name="Comentarios" rows="10" cols="40">Escriba su comentario...</textarea>
+        </section>
+        <section>
+            <form
+                action="https://formspree.io/f/mvgkazrg"
+                method="POST"
+                >
+                <label>
+                    Ingresa tu email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Ingresa tu message:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Enviar</button>
+                </form>
+        </section>
+    </main>
+<hr>
+    <footer>
+        <p>footer pie de pagina</p>
+    </footer>
+</body>
+</html>
