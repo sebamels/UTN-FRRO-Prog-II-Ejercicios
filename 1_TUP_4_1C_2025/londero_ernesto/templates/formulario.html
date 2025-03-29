@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tablas, frecuencias, periodos, Rudolf Hertz, matematicas">
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="./galeria.html">Galeria</a>
+            <a href="./tabla.html">Tabla</a>
+            <a href="https://www.google.com/?hl=es" target="_blank">Google</a>
+            <a href="./lista.html">Listas</a>
+            <a href="#">Formulario</a>
+        </nav>
+    </header>
+    <br><br>
+    <main>
+        <section>
+            <form action="Link" method="post" target="_blank">
+                <label for="fname">Nombre</label>
+                <input size="30" type="text" name="fname" id="fname" autocomplete="off"  required>
+                <label for="lname">Apellido</label>
+                <input size="30" type="text" name="lname" id="lname" autocomplete="off" required>
+                <br><br>
+                <label for="birthdate">Fecha de Nacimiento</label>
+                <input type="date" name="birthdate" id="birthdate" min="1950-01-01" max="2025-03-29" required>
+                <label for="age">Edad</label>
+                <input type="number" name="age" id="age" min="18" max="99" placeholder="21">
+                <br><br>
+                Genero:
+                <select name="genero" id="genero">
+                    <option value="m">M</option>
+                    <option value="f">F</option>
+                    <option value="otro">OTRO</option>
+                </select>
+                <br>
+                <h3>Area</h3>
+                <input type="radio" name="option" value="AppWeb">App Web
+                <input type="radio" name="option" value="AnálisisDeDatos">Análisis de Datos
+                <input type="radio" name="option" value="DesarrolloDeJuegos">Desarrollo de Juegos
+                <br>
+                <h3>Tecnología</h3>
+                <input type="checkbox" name="tecnologia" id="html">HTML
+                <input type="checkbox" name="tecnologia" id="css">CSS
+                <input type="checkbox" name="tecnologia" id="js">JS
+                <br><br>
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    <label for="phone">Celular</label>
+                    <input type="tel" name="phone" id="phone">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <br><br>
+                    <label for="file">Archivo</label>
+                    <input type="file" name="file" id="file">
+                </fieldset>
+                <br><br>
+                Dejanos tú consulta:
+                <br>
+                <textarea name="consulta" id="consulta" cols="40" rows="10"></textarea>
+                <br><br>
+
+                <input type="reset" value="Limpiar">
+                <input type="submit" value="Enviar">
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
