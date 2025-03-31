@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="icon" href="./img/gato.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./galeria.html">Galeria</a></li>
+                <li><a href="./tabla.html">Tabla</a></li>
+                <li><a href="https://www.google.com/">Google</a></li>
+                <li><a href="./formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Registro</h2>
+        <form action="">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br> <br>
+            <label for="apellido">Apellido: </label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br><br>
+            <label for="fecha">Fecha de nacimiento: </label>
+            <input type="date" id="fecha" name="fecha">
+            <br> <br>
+            <label for="edad">Edad: </label>
+            <input type="number" id="edad" name="edad">
+            <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <br>
+            <p>Genero: </p>
+            <input type="radio" name="genero" id="masculino" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id="femenino" value="femenino">
+            <label for="femenino">Femenino</label>
+            <input type="radio" name="genero" id="otro" value="otro">
+            <label for="otro">Otro</label>
+            <br>
+            <p>Area a desarrollarse: </p>
+            <input type="radio" name="area" id="app" value="app">
+            <label for="app">App web</label>
+            <input type="radio" name="area" id="analisis" value="analisis">
+            <label for="analisis">Analisis de datos</label>
+            <input type="radio" name="area" id="desarrollo" value="desarrollo">
+            <label for="desarrollo">Desarrollo de juegos</label>
+            <br>
+            <p>Tecnologia: </p>
+            <input type="checkbox" name="tecnologia" id="HTML" value="HTML">
+            <label for="HTML">HTML</label>
+            <input type="checkbox" name="tecnologia" id="CSS" value="CSS">
+            <label for="CSS">CSS</label>
+            <input type="checkbox" name="tecnologia" id="JS" value="JS">
+            <label for="JS">JS</label>
+            <br>
+            <p>Navegador: </p>
+            <input type="checkbox" name="navegador" id="chrome" value="chrome">
+            <label for="chrome">Chrome</label>
+            <input type="checkbox" name="navegador" id="Opera" value="Opera">
+            <label for="Opera">Opera</label>
+            <input type="checkbox" name="navegador" id="Safari" value="Safari">
+            <label for="Safari">Safari</label>
+            <input type="checkbox" name="navegador" id="Firefox" value="Firefox">
+            <label for="Firefox">Firefox</label>
+            <input type="checkbox" name="navegador" id="Edge" value="Edge">
+            <label for="Edge">Edge</label>
+            <br><br>
+            <fieldset>
+                <legend>Informacion personal</legend>
+                <input type="number" name="telefono" id="telefono" value="telefono">
+                <label for="telefono">Telefono</label>
+                <br><br>
+                <input type="file" name="archivo" id="archivo" value="archivo">
+                <label for="archivo">archivo</label>
+            </fieldset>
+            <br>
+            <label for="comentario">Comentario: </label>
+            <textarea name="comentario" id="comentario"></textarea>
+        </form>
+    </main>
+    
+    <footer>
+        <p>Juana Chies Doumecq</p>
+    </footer>
+</body>
+</html>
