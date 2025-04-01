@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        main h1
+        {
+            font-size: 50px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        main h2 
+        {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        table.tabla1,td,th
+        {
+            border:1px solid #000000;
+            border-collapse: collapse; /*para q los bordes se junten*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Horarios de clases</h1>
+    </header>
+<main>
+    <table style="width: 80%;" class="tabla1">
+        <tr class="table">
+            <th>Horas</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miercoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th></th>
+        </tr>
+        
+        <tr style="text-align: center;">
+            <td>8:00-9:00</td>
+            <td rowspan="2" style="background-color: rgb(255, 12, 12);">Matematicas</td>
+            <td style="background-color: brown;">Lengua</td>
+            <td style="background-color: violet;">Musica</td>
+            <td></td>
+            <td rowspan="2" style="background-color: rgb(241, 18, 18);">matematicas</td>
+        </tr>
+        
+        <tr style="text-align: center;">
+            <td>9:00-10:00</td>
+            <td>Ingles</td>
+            <td>Ingles</td>
+            <td>E.fisica</td>
+        </tr>
+        
+        <tr style="text-align: center;">
+            <td>10:00-10:30</td>
+            <td colspan="5" style="background-color: rgb(35, 122, 13);">Recreo</td>
+            
+        </tr>
+    
+        <tr style="text-align: center;">
+            <td>10:30-11:30</td>
+            <td>E.fisica</td>
+            <td>Valenciano</td>
+            <td rowspan="2" style="background-color: brown;">Lengua</td>
+            <td style="background-color: yellow;">Informatica</td>
+            <td>Ingles</td>
+        </tr>
+        
+        <tr style="text-align: center;">
+            <td>12:30-13:30</td>
+            <td style="background-color: violet;">Musica</td>
+          <td></td>
+          <td rowspan="2" style="background-color: rgb(255, 12, 12);">Matematicas</td>
+          <td style="background-color: rgb(213, 250, 6);">Informatica</td>
+        </tr>
+        
+        <tr style="text-align: center;">
+            <td>13:30-14:30</td>
+            <td></td>
+        </tr>
+    </table>
+</main>
+</body>
+</html>
