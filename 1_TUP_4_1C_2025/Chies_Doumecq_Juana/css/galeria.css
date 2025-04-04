@@ -1,0 +1,70 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+nav{
+    display: inline;
+}
+
+header{
+    background-color: rgb(196, 172, 136);
+    text-align: center;
+    padding: 5%;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+.hip{
+    text-decoration: none;
+    color: black;
+}
+
+:root{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    color: brown;
+    background-color: antiquewhite;
+}
+
+.card{
+    display: flex; 
+    flex-direction: column;
+    background-color: rgba(42, 67, 59, 0.1); 
+    max-width: 300px; 
+    width: 100%; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); 
+    text-align: center; 
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+section {
+    padding: 55;
+    display: flex; 
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Si la pantalla es pequeña, las tarjetas bajan de línea */
+}
+
+footer{
+    background-color: rgb(196, 172, 136);
+    color: black;
+    padding: 5%;
+    text-align: center;
+}
+
+
+
+/* ESTO HIZO LA PROFE NO SE
+div{
+    float: left;
+    width: 49%;
+    margin: 0.5%;
+}*/
