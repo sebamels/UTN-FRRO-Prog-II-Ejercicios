@@ -1,0 +1,30 @@
+nav {text-align: center;}
+
+:root 
+{
+    --primary-color: blue;
+    --second-color: grey;
+}
+
+h1 
+{
+    font-family: "Noto Sans Gunjala Gondi", sans-serif;
+}
+
+*{padding: 0%; margin: 0%;}
+
+body {background-color: aliceblue;}
+
+.card {display: inline-block; background-color: rbga(42,67,59,0.1); max-width: 300px; width: 100%; box-shadow:  rgba(0,0,0,0.6); text-align: center; border-radius: 10px; overflow: hidden;}
+
+.imagen-responsive {max-width: 200px; max-height: 350px; display: block;}
+
+#descargas {width: 100px; height: 100px; background-color: var(--primary-color);}
+
+.iconogaleria {margin: 20px; height: 30px; width: 30px; text-align: center; font-size: 24px; line-height: 40px; display: inline-block;}
+
+#descargas {max-width: 300px; border: solid black 20px; padding: 40px; margin: 20px;}
+
+.card {position: relative; left: 20px;}
+
+#TituloGaleria {position: absolute; width: 300px; height: 20px; margin-bottom: 0%; margin-right: 0%;}
