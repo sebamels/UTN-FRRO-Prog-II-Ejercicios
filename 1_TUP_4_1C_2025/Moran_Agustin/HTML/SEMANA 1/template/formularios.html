@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav style="background-color: bisque;">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="tabla.html">Tabla</a></li>
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="formularios.html">formularios</a></li>
+                <li><a href="https://www.google.com">Google</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Ingrese su Nombre"><br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" placeholder="Ingrese su Apellido"><br><br>
+        <label for="edad">Edad:</label>
+        <input type="text" name="edad" placeholder="Ingrese su Edad"><br><br>
+        <label for="nacimiento">Fecha de Nacimiento</label>
+        <input type="date" name="nacimiento"><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset"><br><br>
+        <h3>Genero:</h3>
+            <input type="radio" name="Masculino" value="1">Masculino
+            <input type="radio" name="Femenino" value="2">Femenino
+            <input type="radio" name="Otro" value="3">Otro
+        <h3>Areas a Desarrolarse:</h3>
+            <input type="radio" name="AppWeb" value="1">App Web
+            <input type="radio" name="AnalisDatos" value="2">Analisis de Datos
+            <input type="radio" name="Desjuegos" value="3">Desarrollo de Juegos
+        <h3>Seleccione Tecnologia:</h3>
+            <select name="Tecnologia">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JS</option>
+            </select> 
+        <h3>Seleccione Navegador:</h3>
+            <select name="Navegador">
+                <option value="Chorme">Chorme</option>
+                <option value="Opera">Opera</option>
+                <option value="FireFox">FireFox</option>
+                <option value="Edge">Edge</option>
+            </select>
+        <fieldset>
+            <label for="telefono">Telefono</label>
+                    <input type="tel" name="telefono"><br></br>
+                    <label for="file">Archivo</label>
+                    <input type="file" name="archivo">
+        </fieldset>
+        <h3>Deje un Comentario</h3>
+            <textarea name="Comentario" id="Comentario" rows="10" cols="40"></textarea>
+    </section>
+</body>
+</html>

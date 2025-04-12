@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <header>
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="tabla.html">Tabla</a>
+        <a href="https://www.google.com/?hl=es">Google</a>
+        <a href="lista.html">listas</a>
+        <a href="formulario.html">formulario</a>
+ </header>
+</head>
+<body>
+    <section class="seccion-4">
+        <h2>Formulario de registro</h2>
+        <form action="https://formspree.io/" method="POST">
+          <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br>
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            <br>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            <br>
+          </fieldset>
+          <br>
+          <label for="genero">Género:</label>
+          <select id="genero" name="genero" required>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+            <option value="OTRO">Otro</option>
+          </select>
+          <br>
+          <label for="area_desarrollo">Área de desarrollo:</label>
+          <input type="radio" id="app_web" name="area_desarrollo" value="App web">
+          <label for="app_web">App web</label>
+          <input type="radio" id="analisis_datos" name="area_desarrollo" value="Análisis de datos">
+          <label for="analisis_datos">Análisis de datos</label>
+          <input type="radio" id="desarrollo_juegos" name="area_desarrollo" value="Desarrollo de juegos">
+          <label for="desarrollo_juegos">Desarrollo de juegos</label>
+          <br>
+          <label for="tecnologia">Tecnología:</label>
+          <input type="checkbox" id="html" name="tecnologia[]" value="HTML">
+          <label for="html">HTML</label>
+          <input type="checkbox" id="css" name="tecnologia[]" value="CSS">
+          <label for="css">CSS</label>
+          <input type="checkbox" id="js" name="tecnologia[]" value="JS">
+          <label for="js">JS</label>
+          <br>
+          <label for="navegador">Navegador:</label>
+          <input type="checkbox" id="chrome" name="navegador[]" value="Chrome">
+          <label for="chrome">Chrome</label>
+          <input type="checkbox" id="opera" name="navegador[]" value="Opera">
+          <label for="opera">Opera</label>
+          <input type="checkbox" id="safari" name="navegador[]" value="Safari">
+          <label for="safari">Safari</label>
+          <input type="checkbox" id="firefox" name="navegador[]" value="Firefox">
+          <label for="firefox">Firefox</label>
+          <input type="checkbox" id="edge" name="navegador[]" value="Edge">
+          <label for="edge">Edge</label>
+          <br>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono">
+          <br>
+          <label for="archivo">Archivo:</label>
+          <input type="file" id="archivo" name="archivo">
+          <br>
+         
+</body>
+</html>

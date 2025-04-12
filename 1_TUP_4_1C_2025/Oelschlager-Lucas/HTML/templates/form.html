@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <section>
+        <form  action="https://formspree.io/f/mjkyrqkj"
+        method="POST">
+            <label for="nameInput">
+                Nombre:
+                <input type="text" name="" id="nameInput" placeholder="Nombre">
+            </label>
+            <br>
+            <label for="lastNameInput">
+                Apellido:
+                <input type="text" name="" id="lastNameInput" placeholder="Apellido">
+            </label>
+            <br>
+            <label for="dateInput" >
+                Fecha de nacimiento:
+                <input type="date" name="" id="dateInput" placeholder="Fecha de nacimiento">
+            </label>
+            <br>
+            <button type="button">Enviar</button>
+            <br>
+            <button type="reset">Limpiar</button>
+            <br>
+            <label for="genderSelect">
+                Género:
+                <select name="gender" id="genderSelect">
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </label>
+            <br>
+            <p>Seleccione un area de desarrollo:</p>
+           <label for="appWeb">
+                App Web
+                <input type="radio" name="area" id="appWeb">
+           </label>
+           <br>
+           <label for="analisisDatos">
+            Analisis de datos
+            <input type="radio" name="area" id="analisisDatos">
+       </label>
+       <br>
+       <label for="desarrolloJuegos">
+        Desarrollo de juegos
+        <input type="radio" name="area" id="desarrolloJuegos">
+   </label>
+   <br>
+    <p>Seleccione una tecnologia o varias:</p>
+    <label for="htmlCheckbox">
+        HTML
+        <input type="checkbox" name="tec" id="htmlCheckbox" >
+    </label>
+    <br>
+    <label for="cssCheckbox">
+        CSS
+        <input type="checkbox" name="tec" id="cssCheckbox" >
+    </label>
+    <br>
+    <label for="jsCheckbox">
+        JavaScript
+        <input type="checkbox" name="tec" id="jsCheckbox">
+    </label>
+    <br>
+    <p>Seleccione un navegador:</p>
+    <select name="" id="navegadorOpcion">
+        <option value="Chrome">Chrome</option>
+        <option value="Opera">Opera</option>
+        <option value="Safari">Safari</option>
+        <option value="Firefox">Firefox</option>
+        <option value="Edge">Edge</option>
+    </select>
+    <br>
+    <fieldset>
+        <legend>Datos Personales:</legend>
+        <label for="telInput">
+            Telefono:
+            <br>
+            <input type="tel" name="" id="telInput" placeholder="Telefono">
+        </label>
+        <br>
+        <label for="fileInput">
+            Sube un archivo
+            <br>
+            <input type="file" name="" id="fileInput">
+        </label>
+        <br>
+        <label for="coments">
+            Comentarios:
+            <br>
+            <textarea name="" id=""></textarea>
+        </label>
+       
+    </fieldset>
+        </form>
+    </section>
+</body>
+</html>
