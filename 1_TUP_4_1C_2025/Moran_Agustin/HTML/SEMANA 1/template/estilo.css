@@ -1,0 +1,28 @@
+:root
+{
+    --color-principal: beige;
+    --color-secundario: #333;
+    --color-terciario: #666;
+}
+
+*{margin: 0%; padding: 0%;}
+
+body{font-family: 'Times New Roman', Times, serif; background-color: aliceblue;}
+
+header{ background-color: var(--color-principal); color: var(--color-secundario); text-align: center;}
+
+.icono{height: 80px; width: 80px; border-radius: 50%; margin-right: 20px;}
+
+.header ul{text-align: center;}
+
+.header a{color: var(--color-terciario); margin-left: 25px; margin-right: 25px;}
+
+.TituloPrincipal {font-size: medium; text-align: center; background-image: url(img/golden-retriever.webp); background-repeat: no-repeat; background-position: center; color: transparent; margin: 20px; background-clip: text;}
+
+#Fondo {background-image: url(img/lenguajes-de-programacion-cuales-son-los-10-mas-utilizados.jpeg); background-size: cover; background-position: center; color: var(--color-terciario); text-align: center; margin-top: 0%; padding: 0%;}
+
+.contenido {margin: 60px; padding: 20px; text-align: center; color: var(--color-principal);}
+
+#Bloque-3 {margin: 30px; text-align: center;}
+
+footer {background-color: blueviolet; color: blanchedalmond; padding: 0%; text-align: center;}

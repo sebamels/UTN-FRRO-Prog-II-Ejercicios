@@ -1,0 +1,261 @@
+/*- - - - - - - - - N O R M A L Z A C I O N - - - - - - - -*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Kanit", sans-serif;
+}
+/*- - - - - - - - - H O M E - - - - - - - -*/
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/cyber.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+  animation: slide 32s infinite;
+}
+main {
+  background-color: #f0f0f0;
+  height: 1500px;
+}
+nav a {
+  border: 1px solid white;
+  text-decoration: none;
+  padding: 7px 20px 7px 20px;
+  border-radius: 2px;
+  margin: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+  text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black,
+    1px 1px 0px black;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+nav a:hover {
+  border: 1px solid white;
+  transition: 1s;
+  background-color: rgb(173, 173, 43);
+}
+.nav {
+  padding: 20px;
+  display: flex;
+}
+nav a .fa-solid {
+  font-size: 18px;
+  text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black,
+    1px 1px 0px black;
+}
+@keyframes slide {
+  25% {
+    background-image: url(../assets/defense.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background-image: url(../assets/server.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  75% {
+    background-image: url(../assets/network.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background-image: url(../assets/cyber.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+.welcome-text {
+  font-size: 30px;
+  color: white;
+  letter-spacing: 10px;
+  filter: drop-shadow(0 0 15px white);
+  text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black,
+    1px 1px 0px black;
+  /*margin-top: 50px;*/
+  padding: 10px;
+}
+.p-class {
+  font-size: 12px;
+  text-align: center;
+  width: 50%;
+  color: white;
+  padding: 15px;
+  text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black,
+    1px 1px 0px black;
+}
+.h2-class {
+  color: gray;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 300;
+}
+.fa-person-digging {
+  font-size: 20px;
+}
+.footer-class {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #153448;
+  height: 350px;
+  text-align: center;
+}
+.h3-class {
+  letter-spacing: 5px;
+  font-size: 23px;
+  color: white;
+  padding: 50px;
+  font-weight: 200;
+}
+.email,
+.linkedin {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  padding: 5px;
+  width: 250px;
+  letter-spacing: 1px;
+}
+.email:hover,
+.linkedin:hover {
+  transition: 1s;
+  color: rgb(173, 173, 43);
+}
+.copyright-text {
+  font-size: 10px;
+  color: white;
+  font-weight: 100;
+  margin-top: 80px;
+}
+.active-link {
+  border: 1px solid rgb(173, 173, 43);
+}
+/*- - - - - - - - - P U B L I C A T I O N S - - - - - - - -*/
+.section-class {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.recent-publications,
+.about-me-text {
+  padding: 90px 0px 40px 0px;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.article-container {
+  display: flex;
+  border: 1px solid rgba(128, 128, 128, 0.301);
+  width: 50%;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 11px;
+  background-color: white;
+  border-right: 3px solid #16325b;
+  transition: 1s;
+}
+.article-container:hover {
+  transition: 1s;
+  transform: scale(1.01);
+}
+.info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nd-text {
+  padding: 5px 30px 5px 30px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.description-text {
+  text-align: justify;
+  padding: 5px 30px 5px 30px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.459);
+  font-style: oblique;
+}
+.time-text {
+  padding: 5px 30px 5px 30px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.61);
+}
+.read-more,
+.show-credential-text {
+  color: blue;
+  font-size: 15px;
+  padding: 10px 0px 10px 30px;
+  text-decoration: none;
+  width: 28%;
+  color: rgb(173, 173, 43);
+}
+.show-credential-text {
+  width: 33%;
+}
+.read-more:hover,
+.show-credential-text:hover {
+  color: rgb(92, 124, 29);
+  transition: 1s;
+}
+.fa-angles-right {
+  font-size: 11px;
+}
+.network-defense {
+  border-radius: 3px 0px 0px 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.fa-network-wired,
+.fa-shield-halved,
+.fa-user-secret,
+.fa-server {
+  font-size: 13px;
+}
+/*- - - - - - - - - A B O U T M E - - - - - - - -*/
+.p-class-about-me {
+  font-size: 12px;
+  text-align: justify;
+  width: 50%;
+  color: black;
+  padding: 30px;
+  margin-bottom: 50px;
+  background-color: white;
+  border-left: 4px solid yellow;
+  border-top: 1px solid rgba(128, 128, 128, 0.301);
+  border-right: 1px solid rgba(128, 128, 128, 0.301);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.301);
+  font-weight: 300;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.section-class-about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.certifications-text {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  padding: 40px;
+}
