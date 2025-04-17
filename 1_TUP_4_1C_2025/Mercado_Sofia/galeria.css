@@ -1,0 +1,75 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.titulo{
+    color: #2c2b4b;
+    text-align: center;
+    background-color: #9ddacb;
+    font-size: 500%;
+    opacity: 0.5;
+}
+
+body{
+    
+    background-image:url(img/una\ imagen\ de\ fondo\ con\ colores\ pasteles\ y\ estilo\ flora.jpeg);
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-size: cover; /* Ajustar la imagen para que cubra toda la pantalla */
+    background-position: center; /* Centrar la imagen */
+    backdrop-filter: blur(5px);
+}   
+
+nav a{
+    padding: 10px 20px; /* Espaciado interno */
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin: 0 auto; /* Centrar el nav en la página */
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    
+   
+    
+}
+
+
+
+.logo {
+    width: 300px; /* Define el ancho de la imagen */
+    height: 300px; /* Define la altura de la imagen (igual al ancho) */
+    border-radius: 50%; /* Convierte la imagen en un círculo */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+    margin: 2%;
+
+}
+
+:root {
+    --color-fondo: #f8dcb4 ; 
+    --color-primero:#9c7a9d; 
+    --color-segundo: #a75293; 
+    --color-tercer: #9ddacb; 
+}
+
+
+
+.boton {
+    display: inline-block; /* Convierte el enlace en un elemento tipo bloque en línea */
+    padding: 0.7%;
+    margin: 1%;
+    background-color: var(--color-fondo); /* Color de fondo */
+    color:var(--color-segundo); /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 75%; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
+    transition: background-color 0.3s ease; /* Efecto de transición para el fondo */
+}
+
+.boton:hover {
+    background-color: #2980b9; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.linea {
+    display: inline-block;
+}

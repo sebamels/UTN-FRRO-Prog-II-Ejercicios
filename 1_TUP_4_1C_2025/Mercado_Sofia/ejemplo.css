@@ -1,0 +1,16 @@
+.titulo {
+    font-size: 48px; /* Tamaño de fuente */
+    text-align: center; /* Centrar el texto */
+    margin: 20px; /* Espaciado externo */
+    
+    /* Fondo con imagen */
+    background-image: url('img/images.jpeg'); /* Usa la imagen que prefieras */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-position: center; /* Posicionar la imagen al centro */
+    background-size: cover; /* Ajustar la imagen para cubrir todo el texto */
+
+    /* Estilo del texto */
+    -webkit-background-clip: text; /* Recortar el fondo para mostrarlo solo detrás del texto (navegadores webkit) */
+    background-clip: text; /* Recortar el fondo al texto */
+    color: transparent; /* Hacer el texto transparente para mostrar la imagen de fondo */
+}
