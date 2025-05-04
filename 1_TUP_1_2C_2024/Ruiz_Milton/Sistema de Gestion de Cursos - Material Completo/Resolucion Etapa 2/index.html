@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Cursos</title>
+    <link rel="stylesheet" href="../Resolución Etapa 3/styles/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/f0e78da616.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../Resolución Etapa 3/images/gestion.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="contenedor-banner">
+        <div class="banner-text text-center">
+          <div class="contenedor-texto-plataforma">
+            <i class="fa-solid fa-bars-progress"></i>
+            <span class="texto-plataforma">PLATAFORMA</span>
+            <span class="texto-gestion">DE GESTIÓN EDUCATIVA</span>
+          </div>
+          <div class="text-center col-6 m-2">
+            <p class="texto-solucion">
+              Bienvenido
+              <span class="texto-sistema"
+                >al sistema de gestión de cursos y estudiantes. Este sistema te
+                permitirá gestionar de manera eficiente la información de tus
+                cursos y estudiantes, utilizando clases y objetos para
+                simplificar el proceso. Explora el proyecto que prepare para
+                optimizar tu experiencia académica. ¡Disfruta!</span
+              >
+            </p>
+          </div>
+          <div
+            class="col-sm-12 col-lg-8 col-xl-7 d-flex justify-content-center"
+          >
+            <button title="Empezar" id="link-empezar" class="btn btn-success">
+              <a
+                id="boton-empezar"
+                href="#main-section"
+                style="color: white; text-decoration: none"
+                ><i class="fa-solid fa-play"></i>
+                <span class="texto-empezar">Empezar</span></a
+              >
+            </button>
+          </div>
+          <div class="contendor-texto-diseño">
+            <p title="Diseño: Milton F. Ruiz" class="texto-diseño text-center">
+              Diseño: Milton F. Ruiz <i class="fa-solid fa-pen-nib"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="main-section" class="row">
+          <div class="main-container col-10">
+            <!-- Formulario para agregar cursos -->
+            <h2 class="texto-h2">
+              <i class="fa-solid fa-book-medical"></i> Agregar Curso
+            </h2>
+            <form id="form-curso">
+              <label for="nombre-curso">Nombre</label>
+              <input
+                class="form-control"
+                type="text"
+                id="nombre-curso"
+                required
+              />
+              <label for="profesor-curso">Profesor</label>
+              <input
+                class="form-control"
+                type="text"
+                id="profesor-curso"
+                required
+              />
+              <button
+                title="Agregar Curso"
+                id="boton-agregar-curso"
+                type="submit"
+                class="btn btn-success"
+              >
+                <i class="fa-solid fa-plus"></i>
+                <span class="texto-agregar-curso">Agregar Curso</span>
+              </button>
+            </form>
+            <!-- Formulario para agregar estudiantes -->
+            <h2 class="texto-h2">
+              <i class="fa-solid fa-user-plus"></i> Agregar Estudiante
+            </h2>
+            <form id="form-estudiante">
+              <label for="nombre-estudiante">Nombre</label>
+              <input
+                class="form-control"
+                type="text"
+                id="nombre-estudiante"
+                required
+              />
+              <label for="edad-estudiante">Edad</label>
+              <input
+                class="form-control"
+                type="number"
+                id="edad-estudiante"
+                required
+              />
+              <label for="nota-estudiante">Nota</label>
+              <input
+                class="form-control"
+                type="number"
+                id="nota-estudiante"
+                required
+              />
+              <label for="curso-estudiante">Curso</label>
+              <select class="form-control" id="curso-estudiante">
+                <!-- Opciones de curso dinámicamente -->
+              </select>
+              <button
+                title="Agregar Estudiante"
+                id="boton-agregar-estudiante"
+                type="submit"
+                class="btn btn-success"
+              >
+                <i class="fa-solid fa-plus"></i>
+                <span class="texto-agregar-estudiante">Agregar Estudiante</span>
+              </button>
+            </form>
+            <!-- Listado de cursos y estudiantes -->
+            <h2 class="texto-h2">
+              <i class="fa-solid fa-list"></i> Listado de Cursos y Estudiantes
+            </h2>
+            <div class="input-container mb-5 container">
+              <div class="row">
+                <div class="col">
+                  <div class="json">
+                    <button
+                      title="Exportar a JSON"
+                      id="exportar-json"
+                      class="btn btn-success"
+                    >
+                      <i class="fa-solid fa-download"></i>
+                      <span class="texto-exportar-json">Exportar a JSON</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col position-relative">
+                  <input
+                    type="text"
+                    id="busqueda-ingresada"
+                    class="form-control"
+                    placeholder="Buscar curso o estudiante..."
+                  />
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="col contenedor-select">
+                  <select id="filtro-estudiantes" class="form-select">
+                    <option value="">Ordenar por</option>
+                    <option value="edad">Ordenar por Edad</option>
+                    <option value="nota">Ordenar por Nota</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div id="formulario-edicion" style="display: none">
+              <h2 class="texto-h2">Edición</h2>
+              <div id="form-edicion" class="row">
+                <h4 class="texto-h4-curso">
+                  <i class="fa-solid fa-graduation-cap"></i> Curso
+                </h4>
+                <div class="col-md-6">
+                  <label for="nuevo-nombre-curso">Nuevo Curso</label>
+                  <input
+                    type="text"
+                    id="nuevo-nombre-curso"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="nuevo-nombre-profesor">Nuevo Profesor</label>
+                  <input
+                    type="text"
+                    id="nuevo-nombre-profesor"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-12">
+                  <h4 class="texto-h4-estudiante">
+                    <i class="fa-solid fa-users"></i> Estudiantes
+                  </h4>
+                  <!-- Formulario de edición de estudiante -->
+                  <div
+                    class="row"
+                    id="formulario-edicion-estudiante"
+                    style="display: none"
+                  >
+                    <div class="col">
+                      <label for="nombre-estudiante-editar">Nombre</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="nombre-estudiante-editar"
+                        placeholder="Nombre"
+                      />
+                    </div>
+                    <div class="col">
+                      <label for="edad-estudiante-editar">Edad</label>
+                      <input
+                        class="form-control"
+                        type="number"
+                        id="edad-estudiante-editar"
+                        placeholder="Edad"
+                      />
+                    </div>
+                    <div class="col">
+                      <label for="nota-estudiante-editar">Nota</label>
+                      <input
+                        class="form-control"
+                        type="number"
+                        id="nota-estudiante-editar"
+                        placeholder="Nota"
+                        step="0.1"
+                        min="0"
+                        max="10"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <button
+                        title="Guardar"
+                        id="guardar-edicion-estudiante"
+                        class="btn btn-info"
+                      >
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar
+                      </button>
+                      <button
+                        title="Cancelar"
+                        id="cancelar-edicion-estudiante"
+                        class="btn btn-secondary"
+                      >
+                        <i class="fa-solid fa-x"></i> Cancelar
+                      </button>
+                    </div>
+                  </div>
+                  <div id="lista-estudiantes-edicion"></div>
+                  <!-- Aquí se mostrará la tabla -->
+                </div>
+                <div class="col-12">
+                  <button
+                    title="Guardar"
+                    id="guardar-edicion"
+                    class="btn btn-info"
+                  >
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar
+                  </button>
+                  <button
+                    title="Cancelar"
+                    id="cancelar-edicion"
+                    class="btn btn-secondary"
+                  >
+                    <i class="fa-solid fa-x"></i> Cancelar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Modal de Confirmación -->
+            <div id="modal-confirmacion" class="modal">
+              <div class="modal-content" id="contenedor-modal">
+                <p id="mensaje-confirmacion"></p>
+                <button id="btn-confirmar" class="btn btn-danger">Sí</button>
+                <button id="btn-cancelar" class="btn btn-secondary">No</button>
+              </div>
+            </div>
+            <!-- Lista estudiantes a editar -->
+            <div id="lista-estudiantes-edicion"></div>
+            <div id="lista-cursos" class="table table-responsive">
+              <!-- Lista de Cursos y estudiantes -->
+            </div>
+            <!-- Estadísticas Generales -->
+            <h2 class="texto-h2-estadisticas">
+              <i class="fa-solid fa-chart-simple"></i> Estadísticas Generales
+              del Curso
+            </h2>
+            <div id="contenedor-estadisticas" class="table table-responsive">
+              <div class="d-flex">
+                <div class="col">
+                  <canvas
+                    id="graficaEstudiantes"
+                    style="display: block; width: 100%; height: 250px"
+                  ></canvas>
+                </div>
+                <div class="col">
+                  <h2 class="texto-h2-informacion">Información del Sistema</h2>
+                  <table id="tabla-estadisticas" style="display: table">
+                    <thead>
+                      <tr>
+                        <th>Estudiantes</th>
+                        <th>Promedio</th>
+                        <th>Cursos</th>
+                        <th>Mejor Curso</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td id="total-estudiantes"></td>
+                        <td id="promedio-general"></td>
+                        <td id="total-cursos"></td>
+                        <td id="mejor-curso"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer-content col-10">
+          <div class="footer-redes col">
+            <h3 class="h3-mis-redes">
+              <i class="fa-solid fa-share-nodes"></i> Mis redes
+            </h3>
+            <a
+              title="LinkedIn"
+              href="https://www.linkedin.com/in/miltonfruiz/"
+              target="_blank"
+              class="social-link"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              title="GitHub"
+              href="https://github.com/miltonfruiz"
+              target="_blank"
+              class="social-link"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              title="Instagram"
+              href="https://www.instagram.com/miltonfrdev/"
+              target="_blank"
+              class="social-link"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              title="Twitter"
+              href="https://x.com/mfrok24"
+              target="_blank"
+              class="social-link"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              title="Discord"
+              href="https://discord.gg/evVPHr7h"
+              target="_blank"
+              class="social-link"
+              ><i class="fa-brands fa-discord"></i
+            ></a>
+            <a
+              href="https://wa.me/3413245896"
+              target="_blank"
+              class="boton-whatsapp"
+              title="Enviar WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+          <div class="footer-contacto col">
+            <h3 class="texto-contacto">
+              <i class="fa-regular fa-address-book"></i> Contacto
+            </h3>
+            <p class="info-redes">
+              <a
+                href="mailto:miltonfruizok@gmail.com"
+                target="_blank"
+                class="email-link"
+                ><i class="fa-solid fa-envelope"></i> miltonfruizok@gmail.com</a
+              >
+            </p>
+            <p class="info-redes">
+              <i class="fa-solid fa-phone"></i> Celular: 341-3245896
+            </p>
+          </div>
+        </div>
+        <div>
+          <p class="copyright">
+            <i class="fa-regular fa-copyright"></i> 2024 Milton Franco Ruiz /
+            Sistema de Gestión de Cursos. All rights reserved
+          </p>
+        </div>
+      </footer>
+    </main>
+    <script type="module" src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

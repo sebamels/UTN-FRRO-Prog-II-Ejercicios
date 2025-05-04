@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+   <style>
+h1{text-align:center; font-size: 50px;}
+textarea{text-align: start;}
+   </style> 
+</head>
+<body>
+    <h1>Encuesta</h1>
+    <h3><a href="../templates/index.html">Inicio</a></h3>
+    <section>
+        <form action="" method="">
+            <label for="nombre">Nombre:</label>
+            <input  type="text" id="nombre" name="nombre" >
+            <label for="apellido">Apellido:</label>
+            <input  type="text" id="apellido" name="apellido" >
+            <br>
+            <br>
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input  type="text" id="fecha" name="fecha" >
+            <label for="edad">Edad:</label>
+            <input  type="text" id="edad" name="edad" >
+            <br>
+            <br>
+            <input type="submit" value="enviar">
+            <input type="reset" value="borrar">
+        </form>
+        <h3>"Seleccione su Genero"</h3>
+        <select name="Genero">
+            <br>
+            <option>Masculino</option>
+            <option>Femenino </option>
+            <option>Otro</option>
+       
+        </select>
+       
+        <h3> ¿Cual es tu generacion de Toyota Supra favorita?</h3>
+        <input type="radio" name="fav1" value="1">Primera generacion
+        <input type="radio" name="fav2" value="2">Segunda generacion
+        <input type="radio" name="fav3" value="3">Tercera generacion
+        <input type="radio" name="fav4" value="4">Cuarta generacion
+        <input type="radio" name="fav5" value="5">Quinta generacion
+        
+        <h3>¿Que modelo de Toyota Supra has probado?</h3>
+        <checkbox>
+            
+            <input type="checkbox" name="opcion1" value="1">Primera generacion
+            <input type="checkbox" name="opcion1" value="2">Segunda generacion
+            <input type="checkbox" name="opcion1" value="3">Tercera generacion
+            <input type="checkbox" name="opcion1" value="4">Cuarta generacion
+            <input type="checkbox" name="opcion1" value="5">Quinta Generacion
+            <input type="checkbox" name="opcion1" value="6">Ninguno
+        </checkbox>
+       
+        <h3>¿Que navegador usas para navegar por esta pagina?</h3>
+        <select name="navegador">
+           
+            <option>Firefox</option>
+            <option>Chrome</option>
+            <option>Edge</option>
+            <option>Safari</option>
+            <option>Opera</option>
+        </select>
+
+        <fieldset>
+            <legend>Telefono y fotos con tu version favorita del Toyota Supra</legend>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" id="phone" name="telefono"/>
+            <label for="archivo">Archivos</label>
+            <input type="file" id="files" name="archivo"/>
+        </fieldset>
+Consultas<textarea name="consulta" rows="10" cols="30">
+Escribime tu consulta sobre el tema
+       </textarea>
+    </section>
+</body>
+</html>

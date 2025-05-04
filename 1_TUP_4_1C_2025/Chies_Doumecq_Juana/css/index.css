@@ -1,0 +1,73 @@
+:root{
+    color: brown;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+h1{
+    color:pink;
+    font-family: cursive;
+    text-align: center;
+    font-size: 3rem;  /* Tamaño de fuente grande */
+    text-align: center;  /* Alinear el texto al centro */
+    background-image: url(../img/gato.ico);  /* Agregar imagen al texto */
+    background-repeat: no-repeat;  /* No repetir la imagen */
+    background-position: center;  /* Posicionar la imagen en el centro */
+    color: transparent;  /* Hacer el texto transparente */
+    margin: 20px;  /* Agregar un margen */
+    background-clip: text;  /* Aplicar la imagen de fondo al texto */
+}
+
+#parrafo{
+    text-align: justify;
+}
+
+header{
+    background-color: rgb(196, 172, 136);
+    text-align: center;
+    padding: 5%;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+    border-radius: 90%;
+}
+
+.img{
+    align-content: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hip{
+    color: black;
+    text-decoration: none;
+}
+
+#contenido{
+    text-align: justify;
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
+}
+
+#pie{
+    background-color: rgb(196, 172, 136);
+    color: black;
+    padding: 5%;
+    text-align: center;
+}

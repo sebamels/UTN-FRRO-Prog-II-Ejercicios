@@ -1,0 +1,70 @@
+header {
+    font-size: 20px;
+}
+
+body{
+    background-color: yellow;
+}
+
+.vista{
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+
+}
+
+div p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+.imagen:hover {
+    transition:box-shadow 0.3s ease;
+    border: 20px 4px black;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 20px;
+    background-color: rgb(217, 166, 46);
+    box-shadow: 3px 4px 15px black;
+    cursor: pointer;
+
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 2px 10px black;
+    outline: 0;
+    display: inline-block;
+    padding: 10px;
+    color:black ;
+    background-color: rgb(217, 166, 46);
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    width: 30%;
+   
+}
+p button:hover { 
+    color: brown;
+}
+
+
+
+#Fondo {
+    background-color: yellow;
+}
+
+
+h1, h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-shadow: 2px 5px 3px rgb(216, 205, 211);
+}
+
+
+
+.pie {
+    text-align: center;
+}
+

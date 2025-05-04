@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./imagenes/icono.png" type="image/png">
+    <title>RIVER PLATE</title>
+<style>
+
+ body
+{
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+a:hover
+{
+    color: #ff0000;
+}
+header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+nav
+{
+    color: rgb(0, 0, 0);
+}
+P:hover
+{
+    color: #ff0000;
+}
+label
+{
+    color: rgb(255, 255, 255);
+}
+footer
+{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+}
+form
+{
+    text-align: center;
+}
+input
+{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    margin: 5px;/*margen entre el boton de buscar y la barra de busqueda*/
+}
+
+</style>
+</head>
+<!--
+1.-Insertar una imagen con un texto alternativo
+2.- Agregar un video que pueda reproducirse con controles
+3.- Incluir un audio que se reproduzca automáticamente
+4.- Insertar un iframe con un mapa de Google
+-->
+<body>
+    <!--
+    <audio src="Benson Boone - Beautiful Things (Official Music Video).mp3" autoplay>
+        <source src="Benson Boone - Beautiful Things (Official Music Video).mp3" type="audio/mpeg">
+        tu navegador no soporta el audio 
+    </audio>
+-->
+    <header>
+        <h1 style="color: rgb(0, 0, 0);">River Plate</h1>
+        <nav>
+            <ul>
+                <li class="lo"><a href="galeria.html">Galeria</a></li>
+                <li class="lo"><a href="index.html">mini-Historia</a></li>
+                <li class="lo"><a href="https://www.google.com" target="_blank">Google</a></li>
+            </ul>
+        </nav>
+        <br><br>
+    </header><br>
+    <main>
+
+        <form action="https://youtu.be/K1JVPUH8EDU" method="get" controls>
+            <br>
+            <h2 style="color: rgb(255, 255, 255);" class="h2">Formulario</h2>
+            <br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required>
+            <br><br>
+            <label for="Apellido">Apellido:</label>
+            <input type="text" name="Apellido" id="Apellido" required>
+            <br><br>
+            <label for="email">  Email:</label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+            <label for="Genero">Selecciona tu genero</label>
+            <br><br>
+            <input type="radio" name="Genero" id="Genero" value="Masculino" required>
+            <label for="Masculino">Masculino</label>
+
+            <input type="radio" name="Genero" id="Genero" value="Femenino" required>
+            <label for="Femenino">Femenino</label>
+            <br><br>
+            
+            <label for="Fecha">Fecha:</label>
+            <input type="date" name="Fecha" id="fecha de nacimiento" required>
+            <br><br>
+            
+            <label for="mensaje">Mensaje:</label>
+            <br><br>
+            <textarea name="mensaje" id="mensaje" cols="40" rows="10" required></textarea><!--cols es el numero de caracteres que se van a aceptar-->
+            <br><br>
+            
+            <label for="archivo" style="color: rgb(255, 255, 255);">Requisitos: <br>Foto 4x4<br></label>
+            <input type="file" name="archivo" id="archivo" style="background-color: #ffffff;" required>
+            
+            <br><br>
+            <input type="submit" value="Enviar" style="background-color: rgb(255, 255, 255);">
+            <input type="reset" value="Borrar"  style="background-color: rgb(255, 255, 255);">
+        </form>
+
+    </main>
+
+    <footer>
+        <br><br><br>
+        <p  style="text-align: center;">&copy; 2025. Todos los derechos reservados.</p>
+        <p  style="text-align: center;">Desarrollado por Alan Jeremias Veron</p>
+    </footer>
+
+</body>
+</html>

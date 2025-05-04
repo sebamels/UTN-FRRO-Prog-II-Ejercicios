@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div id="main-form" class="col-md-{{ '8' if photo else '6' }}">
+      <h2 class="text-center">
+        {{ 'Editar Foto' if photo else 'Agregar nueva Foto' }}
+      </h2>
+      <div class="row">
+        <div class="col">
+          <form id="form-container" method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+            <div class="form-floating mb-3">
+              {{ form.title(class="form-control", placeholder="Título") }} {{
+              form.title.label(class="form-label") }}
+            </div>
+
+            <div class="form-floating mb-3">
+              {{ form.description(class="form-control",
+              placeholder="Descripción") }} {{
+              form.description.label(class="form-label") }}
+            </div>
+
+            <div class="form-floating mb-3">
+              {{ form.image(class="form-control", placeholder="Imagen",
+              id="imageInput") }} {{ form.image.label(class="form-label") }}
+            </div>
+
+            <div class="form-group mt-3 d-flex justify-content-center">
+              <button
+                type="submit"
+                class="btn btn-success mx-2"
+                id="submit-button"
+              >
+                Enviar
+              </button>
+              <a
+                href="{{ url_for('main.index') }}"
+                class="btn btn-secondary"
+                id="cancel-button"
+              >
+                Cancelar
+              </a>
+            </div>
+          </form>
+        </div>
+
+        {% if photo %}
+        <div id="edit-image" class="col-md-4 text-center mb-3">
+          <p>Imagen actual:</p>
+          <div class="edit-image-container">
+            <img
+              src="{{ url_for('static', filename='uploads/' + photo.image) }}"
+              alt="{{ photo.title }}"
+              style="max-width: 100%; height: auto"
+            />
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

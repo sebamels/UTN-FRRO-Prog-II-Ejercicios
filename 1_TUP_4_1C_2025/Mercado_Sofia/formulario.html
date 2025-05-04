@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Boutique</title>
+    <link rel="icon" href="753305.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>|
+            <a href="galeria.html">Galería</a>|
+            <a href="tabla.html">Tabla</a>|
+            <a href="listas.html">Listas</a>|
+            <a href="formulario.html">Formulario</a>|
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
+        </nav>
+        <meta name="description" content="Esta es una pagina donde se va a encontrar con informacion sobre distintas flores">
+        <meta name="keywords" content="cuidades de las flores, tipos de flores, flor, flores,colores">
+        <meta name="author" content="Sofia Mercado">
+        <hr>
+    </header>
+    <main>
+        <section>
+            <h2>Formulario para realizar un pedido</h2>
+            <form action="" method=""> <!-- pongo donde quiero que se envie el formulario -->
+              
+              <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
+          
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required><br>
+          
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
+          
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="0"><br>
+              </fieldset>
+          
+              
+              <label>Género:</label>
+              <select name="genero" required>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select><br>
+          
+              <fieldset>
+                <legend><u>Con envío:</u></legend>
+                <label for="opcion"></label>
+                <input type="radio" name="opcion" value="SI">SI <br>
+                <label for="opcion"></label>
+                <input type="radio" name="opcion" value="NO">NO
+              </fieldset>
+              
+              
+          
+              <!-- Teléfono y archivo -->
+              <fieldset>
+                <legend>Datos adicionales</legend>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono"><br>
+          
+                <label for="archivo">Subir archivo:</label>
+                <input type="file" id="archivo" name="archivo"><br>
+              </fieldset>
+          
+              <!-- Comentarios -->
+              <label for="comentarios">Comentarios:</label>
+              <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br>
+          
+              <!-- Botones -->
+              <button type="submit">Enviar</button>
+              <button type="reset">Borrar</button>
+            </form>
+          </section>
+          
+    </main>
+</body>
+</html>
